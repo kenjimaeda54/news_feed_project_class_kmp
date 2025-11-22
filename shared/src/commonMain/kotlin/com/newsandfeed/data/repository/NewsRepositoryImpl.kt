@@ -27,6 +27,4 @@ class NewsRepositoryImpl : NewsRepository, KoinComponent {
                 )
             )
         }.flowOn(Dispatchers.IO)
-
-
 }
