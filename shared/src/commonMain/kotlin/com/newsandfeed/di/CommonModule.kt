@@ -31,7 +31,7 @@ private val repositoryModule = module {
 }
 
 private val useCaseModule = module {
-    factory { GetCurrentNewsUseCase(get()) }
+    single { GetCurrentNewsUseCase(get()) }
 }
 
 private val viewModelModule = module {

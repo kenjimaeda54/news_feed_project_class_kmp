@@ -1,5 +1,6 @@
 package com.newsandfeed.ui.features.home
 
+import com.newsandfeed.domain.entity.NewsEntity
 import com.newsandfeed.domain.usecase.home.GetCurrentNewsUseCase
 import com.newsandfeed.ui.features.home.mvi.HomeIntent
 import com.newsandfeed.ui.features.home.mvi.HomeState
@@ -13,38 +14,40 @@ import kotlinx.coroutines.launch
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 
-class HomeViewModel: CoroutineViewModel(), KoinComponent {
-   private val getCurrentNewsUseCase by inject<GetCurrentNewsUseCase>()
-   private val _state = MutableStateFlow(HomeState())
-   val state: StateFlow<HomeState> = _state.asStateFlow()
+class HomeViewModel : CoroutineViewModel(), KoinComponent {
+    private val getCurrentNewsUseCase by inject<GetCurrentNewsUseCase>()
+    private val _state = MutableStateFlow(HomeState())
+    val state: StateFlow<HomeState> = _state.asStateFlow()
 
     init {
         handleIntent(HomeIntent.LoadItems)
     }
 
-    fun  handleIntent(intent: HomeIntent) {
-        when(intent) {
-            HomeIntent.LoadItems -> TODO()
+    fun handleIntent(intent: HomeIntent) {
+        when (intent) {
+            is HomeIntent.LoadItems -> loadCurrentNews()
         }
     }
 
-    private val loadCurrentNews = scope.launch {
-       getCurrentNewsUseCase()
-           .catch { error->
+    private fun loadCurrentNews() = scope.launch {
+        getCurrentNewsUseCase()
+            .catch { error ->
                 _state.update {
-                     it.copy(
-                          isLoading = false,
-                          error = error.message,
-                     )
+                    it.copy(
+                        isLoading = false,
+                        currentNews = NewsEntity(emptyList()),
+                        error = error.message,
+                    )
                 }
-           }
-           .collect { result ->
-              _state.update {
-                  it.copy(
-                      isLoading =  false,
-                      currentNews = result.data ?: it.currentNews,
-                  )
-              }
-       }
+            }
+            .collect { result ->
+                _state.update {
+                    it.copy(
+                        isLoading = false,
+                        currentNews = result.data ?: it.currentNews,
+                        error = null
+                    )
+                }
+            }
     }
 }
