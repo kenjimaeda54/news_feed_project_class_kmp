@@ -4,6 +4,7 @@ import com.newsandfeed.domain.entity.NewsEntity
 import com.newsandfeed.domain.usecase.home.GetCurrentNewsUseCase
 import com.newsandfeed.ui.features.home.mvi.HomeIntent
 import com.newsandfeed.ui.features.home.mvi.HomeState
+import com.newsandfeed.util.CFlow
 import com.newsandfeed.util.CoroutineViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -18,6 +19,7 @@ class HomeViewModel : CoroutineViewModel(), KoinComponent {
     private val getCurrentNewsUseCase by inject<GetCurrentNewsUseCase>()
     private val _state = MutableStateFlow(HomeState())
     val state: StateFlow<HomeState> = _state.asStateFlow()
+    val cState = CFlow(state)
 
     init {
         handleIntent(HomeIntent.LoadItems)

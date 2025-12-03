@@ -7,4 +7,12 @@ data class HomeState(
     val isLoading: Boolean = true,
     val error: String? = "",
     val currentNews:  NewsEntity = NewsEntity(articles = emptyList())
-)
+) {
+
+    constructor(): this(
+       isLoading = true,
+        error = null,
+        currentNews = NewsEntity(articles = emptyList())
+    )
+
+}

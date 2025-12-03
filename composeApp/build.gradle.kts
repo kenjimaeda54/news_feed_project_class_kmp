@@ -34,6 +34,9 @@ kotlin {
             // For Koin DI
             implementation(libs.koin.androidx.core)
             implementation(libs.koin.android)
+
+            //FOR COIL
+            implementation(libs.coil.compose)
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
