@@ -5,12 +5,12 @@ import Shared
 struct iOSApp: App {
     
     init() {
-        CommonModuleKt.doInitKoin()
+          CommonModuleKt.doInitKoin()
     }
     
     var body: some Scene {
         WindowGroup {
-            HomeScreen()
+            MainScreen()
                 .preferredColorScheme(.light)
         }
     }

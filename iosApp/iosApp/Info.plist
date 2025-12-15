@@ -4,7 +4,10 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Google_fonts.ttf</string>
+		<string>GoogleSans-Bold.ttf</string>
+		<string>GoogleSans-Medium.ttf</string>
+		<string>GoogleSans-Regular.ttf</string>
+		<string>GoogleSans-Thin.ttf</string>
 	</array>
 	<key>CADisableMinimumFrameDurationOnPhone</key>
 	<true/>

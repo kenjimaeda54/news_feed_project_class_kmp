@@ -1,0 +1,18 @@
+CREATE TABLE Article (
+    id TEXT NOT NULL PRIMARY KEY
+);
+
+CREATE TABLE Content (
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    articleId TEXT NOT NULL,
+    author TEXT,
+    content TEXT NOT NULL,
+    description TEXT,
+    title TEXT NOT NULL,
+    url TEXT NOT NULL,
+    urlToImage TEXT,
+    FOREIGN KEY(articleId) REFERENCES Article(id)
+        ON DELETE CASCADE
+);
+
+CREATE INDEX idx_content_articleId ON Content(articleId);

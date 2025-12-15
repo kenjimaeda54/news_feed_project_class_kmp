@@ -8,6 +8,7 @@ plugins {
     //plugins add
     alias(libs.plugins.serialization)
     alias(libs.plugins.config.build)
+    alias(libs.plugins.sqldelight)
 }
 
 kotlin {
@@ -42,6 +43,7 @@ kotlin {
             implementation(libs.ktor.negotiation)
             implementation(libs.ktor.serialization)
             implementation(libs.ktor.client.core)
+            implementation(libs.sql.coroutines.extensions)
         }
 
         commonTest.dependencies {
@@ -52,10 +54,12 @@ kotlin {
             implementation(libs.viewModel.ktx)
             implementation(libs.koin.android)
             implementation(libs.ktor.client.android)
+            implementation(libs.sql.android.driver)
         }
 
         iosMain.dependencies {
             implementation(libs.ktor.client.darwin)
+            implementation(libs.sql.native.driver)
         }
     }
 }
@@ -69,5 +73,25 @@ android {
     }
     defaultConfig {
         minSdk = libs.versions.android.minSdk.get().toInt()
+    }
+}
+
+//configuração do sql delight
+sqldelight {
+    databases {
+        create("NewsDatabase") {
+            packageName.set("com.newsandfeed.database")
+
+            deriveSchemaFromMigrations.set(true)
+
+            migrationOutputDirectory.set(
+                file("src/commonMain/sqldelight/com/newsandfeed/database/migrations")
+            )
+
+            schemaOutputDirectory.set(
+                file("src/androidMain/sqldelight/schema")
+            )
+
+        }
     }
 }

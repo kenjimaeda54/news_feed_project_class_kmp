@@ -6,13 +6,13 @@
 //
 import Shared
 
-class HomeStore: ObservableObject  {
-    @Published var state = HomeState()
-    private let viewModel: HomeViewModel
+class ArticleStore: ObservableObject  {
+    @Published var state = ArticleState()
+    private let viewModel: ArticleViewModel
     private var cancelJob: Kotlinx_coroutines_coreJob?
     
     init() {
-        self.viewModel = HomeViewModel()
+        self.viewModel = ArticleViewModel()
         cancelJob = viewModel.cState.subscribe{ newState  in
             if let state = newState {
                 DispatchQueue.main.async {
@@ -24,7 +24,7 @@ class HomeStore: ObservableObject  {
         
     }
     
-    func sendIntent(_ intent: HomeIntent) {
+    func sendIntent(_ intent: ArticleIntent) {
         viewModel.handleIntent(intent: intent)
     }
     

@@ -37,6 +37,10 @@ kotlin {
 
             //FOR COIL
             implementation(libs.coil.compose)
+
+            // FOR NAVIGATION
+            implementation(libs.androidx.navigation.compose)
+            implementation(libs.androidx.navigation)
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)

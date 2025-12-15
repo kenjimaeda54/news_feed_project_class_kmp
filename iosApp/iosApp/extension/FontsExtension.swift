@@ -7,16 +7,22 @@
 
 import SwiftUI
 
-struct FontFamilyApp {
-    static let familyName = "Google_fonts"
-}
+
 
 extension Font {
     
+    private static func fontName(for weight: Font.Weight) -> String  {
+        switch weight  {
+        case .thin: return "GoogleSans-Thin"
+        case .bold: return "GoogleSans-Bold"
+        case .medium: return "GoogleSans-Medium"
+        default: return "GoogleSans-Regular"
+        }
+        
+    }
+    
     static func googleSans(size: CGFloat, weight: Font.Weight) -> Font {
-        
-        let baseFont = Font.custom(FontFamilyApp.familyName, size: size)
-        
-        return baseFont.weight(weight)
+        let name = fontName(for: weight)
+        return Font.custom(name, size: size)
     }
 }

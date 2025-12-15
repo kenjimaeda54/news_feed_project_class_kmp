@@ -1,10 +1,10 @@
 package com.newsandfeed.domain.entity
 
-data class NewsEntity(
-    val articles: List<ArticleEntity>,
+data class ArticleEntity(
+    val content: List<ContentEntity>,
 )
 
-data class ArticleEntity(
+data class ContentEntity(
     val author: String,
     val content: String,
     val description: String,

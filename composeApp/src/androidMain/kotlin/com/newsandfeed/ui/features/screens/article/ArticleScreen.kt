@@ -1,7 +1,6 @@
-package com.newsandfeed.ui.features.home
+package com.newsandfeed.ui.features.screens.article
 
 import android.annotation.SuppressLint
-import android.view.RoundedCorner
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -13,7 +12,6 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.foundation.text.input.TextFieldState
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
@@ -38,14 +36,16 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
-import com.newsandfeed.domain.entity.ArticleEntity
+import com.newsandfeed.domain.entity.ContentEntity
+import com.newsandfeed.ui.features.home.ArticleViewModel
+import com.newsandfeed.ui.features.home.mvi.ArticleIntent
 
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
-fun HomeScreen() {
-    val homeViewModel = viewModel<HomeViewModel>()
-    val state by homeViewModel.state.collectAsState()
+fun ArticleScreen() {
+    val articleViewModel = viewModel<ArticleViewModel>()
+    val state by articleViewModel.state.collectAsState()
     var articleSearch by rememberSaveable {
         mutableStateOf("")
     }
@@ -83,6 +83,7 @@ fun HomeScreen() {
                     value = articleSearch,
                     onValueChange = { value ->
                         articleSearch = value
+                        articleViewModel.handleIntent(ArticleIntent.SearchArticle(value))
                     },
                     label = {
                         Text(
@@ -109,8 +110,8 @@ fun HomeScreen() {
                     },
                 )
                 LazyColumn(content = {
-                    items(state.currentNews.articles,{ it -> it.url}) { article ->
-                        HomeContent(article)
+                    items(state.articles.content,{ it -> it.url}) { content ->
+                        HomeContent(content)
                     }
                 })
             }
@@ -120,7 +121,7 @@ fun HomeScreen() {
 }
 
 @Composable
-private fun HomeContent(article: ArticleEntity) {
+private fun HomeContent(article: ContentEntity) {
     Row(
         modifier = Modifier.padding(
             horizontal = 16.dp,
@@ -154,5 +155,5 @@ private fun HomeContent(article: ArticleEntity) {
 @Preview(showBackground = true)
 @Composable
 fun HomeContentPreview() {
-    HomeScreen()
+    ArticleScreen()
 }

@@ -18,10 +18,10 @@ struct FontsApp {
     }
 
     static var bodySmall: Font {
-        return .googleSans(size: 14, weight: .light)
+        return .googleSans(size: 14, weight: .thin)
     }
     
     static var headline: Font {
-        return .googleSans(size: 20, weight: .heavy)
+        return .googleSans(size: 20, weight: .bold)
     }
 }

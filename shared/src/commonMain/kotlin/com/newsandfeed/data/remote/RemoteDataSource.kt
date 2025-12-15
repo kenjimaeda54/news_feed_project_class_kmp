@@ -10,7 +10,7 @@ import io.ktor.client.request.get
 class RemoteDataSource(private val ktorApi: KtorApi) : KtorApi by ktorApi {
     val apiKey = BuildConfig.API_KEY
 
-    suspend fun fetchAllCurrentNews(): DataOrException<NewsDto?, Boolean, Exception> {
+    suspend fun fetchAllArticles(): DataOrException<NewsDto?, Boolean, Exception> {
         return try {
             val response =
                 httpClient.get("/v2/everything?sources=blasting-news-br,info-money,globogoogle-news-br,&pageSize=10&apiKey=$apiKey")
@@ -19,4 +19,15 @@ class RemoteDataSource(private val ktorApi: KtorApi) : KtorApi by ktorApi {
             DataOrException(data = null, isLoading = false, exception = e)
         }
     }
+
+    suspend fun searchOnlyTopicArticle(word: String): DataOrException<NewsDto?, Boolean, Exception> {
+        return try {
+            val response =
+                httpClient.get("/v2/everything?q=$word&sources=blasting-news-br,info-money,globogoogle-news-br,&pageSize=10&apiKey=$apiKey")
+            DataOrException(data = response.body(), isLoading = false)
+        } catch (e: Exception) {
+            DataOrException(data = null, isLoading = false, exception = e)
+        }
+    }
+
 }

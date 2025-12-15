@@ -1,12 +1,14 @@
 package com.newsandfeed.di
 
 import com.newsandfeed.data.remote.RemoteDataSource
-import com.newsandfeed.data.repository.NewsRepositoryImpl
-import com.newsandfeed.domain.repository.NewsRepository
-import com.newsandfeed.domain.usecase.home.GetCurrentNewsUseCase
+import com.newsandfeed.data.repository.ArticleRepositoryImpl
+import com.newsandfeed.database.NewsDatabase
+import com.newsandfeed.domain.repository.ArticleRepository
+import com.newsandfeed.domain.usecase.article.GetAllArticleUseCase
+import com.newsandfeed.domain.usecase.article.GetOnlyTopicArticleUseCase
 import com.newsandfeed.infra.remote.KtorApi
 import com.newsandfeed.infra.remote.KtorApiImpl
-import com.newsandfeed.ui.features.home.HomeViewModel
+import com.newsandfeed.ui.features.home.ArticleViewModel
 import org.koin.core.context.startKoin
 import org.koin.dsl.KoinAppDeclaration
 import org.koin.dsl.module
@@ -17,7 +19,9 @@ fun initKoin(appDeclaration: KoinAppDeclaration) = startKoin {
         clientModule,
         repositoryModule,
         useCaseModule,
-        viewModelModule
+        viewModelModule,
+        coreDatabase,
+        driverSqlModule,
     )
 }
 
@@ -27,15 +31,20 @@ private val clientModule = module {
 }
 
 private val repositoryModule = module {
-    single<NewsRepository> { NewsRepositoryImpl() }
+    single<ArticleRepository> { ArticleRepositoryImpl() }
 }
 
 private val useCaseModule = module {
-    single { GetCurrentNewsUseCase(get()) }
+    single { GetAllArticleUseCase(get()) }
+    single { GetOnlyTopicArticleUseCase(get()) }
 }
 
 private val viewModelModule = module {
-    single { HomeViewModel() }
+    single { ArticleViewModel() }
+}
+
+private val coreDatabase = module {
+    single { NewsDatabase(get()) }
 }
 
 fun initKoin() = initKoin { }
