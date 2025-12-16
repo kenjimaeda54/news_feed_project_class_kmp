@@ -78,30 +78,20 @@
     │       ├── configuration-cache
     │       │   ├── 595ld7y9jjbvqs7qto2o3lu9
     │       │   │   ├── 3g5i38500lxpdtt2yqysu7lzu
-    │       │   │   │   └── configuration-cache-report.html
     │       │   │   ├── 3mipffozw9wuj42i3vj1wpmll
-    │       │   │   │   └── configuration-cache-report.html
     │       │   │   └── 8tsw7s87iexx8fj5c3i4mlfjl
-    │       │   │       └── configuration-cache-report.html
     │       │   ├── 5iganltkwryy23hpklwulutrv
     │       │   │   ├── 8gp32kozwje9iy1f849mwfg22
-    │       │   │   │   └── configuration-cache-report.html
     │       │   │   └── 97iej74wqdxlvpn9l5evm06nd
-    │       │   │       └── configuration-cache-report.html
     │       │   ├── 6lrs1isuxbkh85vqyzysikaum
     │       │   │   ├── 3pejin6759xihabwu3hbsart
-    │       │   │   │   └── configuration-cache-report.html
     │       │   │   └── 4ky9u40qw0r8whfn5kcn5ika6
-    │       │   │       └── configuration-cache-report.html
     │       │   ├── 9fkyv2lbpu4gltpwugag81b89
     │       │   │   └── bzxgtqus9vxchs699y3mnn9cj
-    │       │   │       └── configuration-cache-report.html
     │       │   ├── bef32qgm0js1vlp33kwhiynpn
     │       │   │   └── 12s397xunxasyrpspi899nkod
-    │       │   │       └── configuration-cache-report.html
     │       │   └── bt3s97t3j0tcp823e4xshx5gj
     │       │       └── 88r2fgkamgalvrtajbwq9dus6
-    │       │           └── configuration-cache-report.html
     │       └── problems
     │           └── problems-report.html
     ├── build.gradle.kts
@@ -110,52 +100,28 @@
     │   │   └── generated
     │   │       └── compose
     │   │           └── resourceGenerator
-    │   │               ├── kotlin
-    │   │               └── preparedResources
     │   ├── build.gradle.kts
     │   └── src
     │       ├── androidMain
     │       │   ├── AndroidManifest.xml
     │       │   ├── composeResources
     │       │   │   └── drawable
-    │       │   │       └── compose-multiplatform.xml
     │       │   ├── kotlin
     │       │   │   └── com
-    │       │   │       ├── .DS_Store
-    │       │   │       └── newsandfeed
     │       │   └── res
     │       │       ├── drawable
-    │       │       │   ├── article.xml
-    │       │       │   ├── home.xml
-    │       │       │   └── ic_launcher_background.xml
     │       │       ├── drawable-v24
-    │       │       │   └── ic_launcher_foreground.xml
     │       │       ├── font
-    │       │       │   └── google_font.ttf
     │       │       ├── mipmap-anydpi-v26
-    │       │       │   ├── ic_launcher.xml
-    │       │       │   └── ic_launcher_round.xml
     │       │       ├── mipmap-hdpi
-    │       │       │   ├── ic_launcher.png
-    │       │       │   └── ic_launcher_round.png
     │       │       ├── mipmap-mdpi
-    │       │       │   ├── ic_launcher.png
-    │       │       │   └── ic_launcher_round.png
     │       │       ├── mipmap-xhdpi
-    │       │       │   ├── ic_launcher.png
-    │       │       │   └── ic_launcher_round.png
     │       │       ├── mipmap-xxhdpi
-    │       │       │   ├── ic_launcher.png
-    │       │       │   └── ic_launcher_round.png
     │       │       ├── mipmap-xxxhdpi
-    │       │       │   ├── ic_launcher.png
-    │       │       │   └── ic_launcher_round.png
     │       │       └── values
-    │       │           └── strings.xml
     │       └── androidUnitTest
     │           └── kotlin
     │               └── com
-    │                   └── newsandfeed
     ├── gradle
     │   ├── libs.versions.toml
     │   └── wrapper
@@ -323,20 +289,6 @@
     │   │   └── XCBuildData
     │   │       └── 13fca72bfad91d937014b812566fcd20.xcbuilddata
     │   │           ├── attachments
-    │   │           │   ├── 17a275d4dc0f6c6521115c620793540e
-    │   │           │   ├── 1a18d32da8b3e910eca1869ac46abc7b
-    │   │           │   ├── 355f5047bcbe1bd3d933c193cd35df7c
-    │   │           │   ├── 437c7a5a4971d9c0c5faa868a3fa5694
-    │   │           │   ├── 45e7b10a23437c285a64a040d0b0c726
-    │   │           │   ├── 482c4148a46f364bd48a47ee0575b715
-    │   │           │   ├── 54531fb3b45591d2af7b0ca350f20830
-    │   │           │   ├── 8bba4233626f64a7ea772bb94a08a1a9
-    │   │           │   ├── a8837f06a943a4dcbf0c27d851e8b1b6
-    │   │           │   ├── d41d8cd98f00b204e9800998ecf8427e
-    │   │           │   ├── f99d0acd46f4167c29829ea33f985e41
-    │   │           │   ├── fcc19ee4a7a8b96e7f8cf4a64f313bb0
-    │   │           │   ├── fd8314defc70a8778956f026c0ddfd19
-    │   │           │   └── ffab6cdef34c68e573676978242fd842
     │   │           ├── build-request.json
     │   │           ├── description.msgpack
     │   │           ├── manifest.json
@@ -353,35 +305,20 @@
     │   │   │   └── colors
     │   │   │       ├── Contents.json
     │   │   │       ├── background.colorset
-    │   │   │       │   └── Contents.json
     │   │   │       ├── error.colorset
-    │   │   │       │   └── Contents.json
     │   │   │       ├── onBackground.colorset
-    │   │   │       │   └── Contents.json
     │   │   │       ├── onError.colorset
-    │   │   │       │   └── Contents.json
     │   │   │       ├── onPrimary.colorset
-    │   │   │       │   └── Contents.json
     │   │   │       ├── onSecondary.colorset
-    │   │   │       │   └── Contents.json
     │   │   │       ├── onSurface.colorset
-    │   │   │       │   └── Contents.json
     │   │   │       ├── onTertiary.colorset
-    │   │   │       │   └── Contents.json
     │   │   │       ├── outline.colorset
-    │   │   │       │   └── Contents.json
     │   │   │       ├── outlineVariant.colorset
-    │   │   │       │   └── Contents.json
     │   │   │       ├── primary.colorset
-    │   │   │       │   └── Contents.json
     │   │   │       ├── secondary.colorset
-    │   │   │       │   └── Contents.json
     │   │   │       ├── surface.colorset
-    │   │   │       │   └── Contents.json
     │   │   │       ├── surfaceContainer.colorset
-    │   │   │       │   └── Contents.json
     │   │   │       └── tertiary.colorset
-    │   │   │           └── Contents.json
     │   │   ├── Info.plist
     │   │   ├── Preview Content
     │   │   │   └── Preview Assets.xcassets
@@ -393,15 +330,8 @@
     │   │   └── ui
     │   │       └── features
     │   │           ├── route
-    │   │           │   └── TabItem.swift
     │   │           ├── screens
-    │   │           │   ├── MainScreen.swift
-    │   │           │   ├── article
-    │   │           │   └── home
     │   │           └── theme
-    │   │               ├── ColorsApp.swift
-    │   │               ├── FontsApp.swift
-    │   │               └── fonts
     │   └── iosApp.xcodeproj
     │       ├── project.pbxproj
     │       ├── project.xcworkspace
@@ -411,16 +341,10 @@
     │       │   │   └── swiftpm
     │       │   └── xcuserdata
     │       │       └── kenjimaeda.xcuserdatad
-    │       │           ├── UserInterfaceState.xcuserstate
-    │       │           ├── WorkspaceSettings.xcsettings
-    │       │           └── xcschemes
     │       └── xcuserdata
     │           └── kenjimaeda.xcuserdatad
     │               ├── xcdebugger
-    │               │   └── Breakpoints_v2.xcbkptlist
     │               └── xcschemes
-    │                   ├── iosApp.xcscheme
-    │                   └── xcschememanagement.plist
     ├── local.properties
     ├── readmeai-venv
     │   ├── .gitignore
@@ -447,917 +371,91 @@
     │   │   └── python3.13
     │   │       └── site-packages
     │   │           ├── __pycache__
-    │   │           │   └── typing_extensions.cpython-313.pyc
     │   │           ├── _yaml
-    │   │           │   ├── __init__.py
-    │   │           │   └── __pycache__
     │   │           ├── aiohappyeyeballs
-    │   │           │   ├── __init__.py
-    │   │           │   ├── __pycache__
-    │   │           │   ├── _staggered.py
-    │   │           │   ├── impl.py
-    │   │           │   ├── py.typed
-    │   │           │   ├── types.py
-    │   │           │   └── utils.py
     │   │           ├── aiohappyeyeballs-2.6.1.dist-info
-    │   │           │   ├── INSTALLER
-    │   │           │   ├── LICENSE
-    │   │           │   ├── METADATA
-    │   │           │   ├── RECORD
-    │   │           │   └── WHEEL
     │   │           ├── aiohttp
-    │   │           │   ├── .hash
-    │   │           │   ├── __init__.py
-    │   │           │   ├── __pycache__
-    │   │           │   ├── _cookie_helpers.py
-    │   │           │   ├── _cparser.pxd
-    │   │           │   ├── _find_header.pxd
-    │   │           │   ├── _headers.pxi
-    │   │           │   ├── _http_parser.cpython-313-darwin.so
-    │   │           │   ├── _http_parser.pyx
-    │   │           │   ├── _http_writer.cpython-313-darwin.so
-    │   │           │   ├── _http_writer.pyx
-    │   │           │   ├── _websocket
-    │   │           │   ├── abc.py
-    │   │           │   ├── base_protocol.py
-    │   │           │   ├── client.py
-    │   │           │   ├── client_exceptions.py
-    │   │           │   ├── client_middleware_digest_auth.py
-    │   │           │   ├── client_middlewares.py
-    │   │           │   ├── client_proto.py
-    │   │           │   ├── client_reqrep.py
-    │   │           │   ├── client_ws.py
-    │   │           │   ├── compression_utils.py
-    │   │           │   ├── connector.py
-    │   │           │   ├── cookiejar.py
-    │   │           │   ├── formdata.py
-    │   │           │   ├── hdrs.py
-    │   │           │   ├── helpers.py
-    │   │           │   ├── http.py
-    │   │           │   ├── http_exceptions.py
-    │   │           │   ├── http_parser.py
-    │   │           │   ├── http_websocket.py
-    │   │           │   ├── http_writer.py
-    │   │           │   ├── log.py
-    │   │           │   ├── multipart.py
-    │   │           │   ├── payload.py
-    │   │           │   ├── payload_streamer.py
-    │   │           │   ├── py.typed
-    │   │           │   ├── pytest_plugin.py
-    │   │           │   ├── resolver.py
-    │   │           │   ├── streams.py
-    │   │           │   ├── tcp_helpers.py
-    │   │           │   ├── test_utils.py
-    │   │           │   ├── tracing.py
-    │   │           │   ├── typedefs.py
-    │   │           │   ├── web.py
-    │   │           │   ├── web_app.py
-    │   │           │   ├── web_exceptions.py
-    │   │           │   ├── web_fileresponse.py
-    │   │           │   ├── web_log.py
-    │   │           │   ├── web_middlewares.py
-    │   │           │   ├── web_protocol.py
-    │   │           │   ├── web_request.py
-    │   │           │   ├── web_response.py
-    │   │           │   ├── web_routedef.py
-    │   │           │   ├── web_runner.py
-    │   │           │   ├── web_server.py
-    │   │           │   ├── web_urldispatcher.py
-    │   │           │   ├── web_ws.py
-    │   │           │   └── worker.py
     │   │           ├── aiohttp-3.13.2.dist-info
-    │   │           │   ├── INSTALLER
-    │   │           │   ├── METADATA
-    │   │           │   ├── RECORD
-    │   │           │   ├── WHEEL
-    │   │           │   ├── licenses
-    │   │           │   └── top_level.txt
     │   │           ├── aiosignal
-    │   │           │   ├── __init__.py
-    │   │           │   ├── __pycache__
-    │   │           │   └── py.typed
     │   │           ├── aiosignal-1.4.0.dist-info
-    │   │           │   ├── INSTALLER
-    │   │           │   ├── METADATA
-    │   │           │   ├── RECORD
-    │   │           │   ├── WHEEL
-    │   │           │   ├── licenses
-    │   │           │   └── top_level.txt
     │   │           ├── annotated_types
-    │   │           │   ├── __init__.py
-    │   │           │   ├── __pycache__
-    │   │           │   ├── py.typed
-    │   │           │   └── test_cases.py
     │   │           ├── annotated_types-0.7.0.dist-info
-    │   │           │   ├── INSTALLER
-    │   │           │   ├── METADATA
-    │   │           │   ├── RECORD
-    │   │           │   ├── WHEEL
-    │   │           │   └── licenses
     │   │           ├── anyio
-    │   │           │   ├── __init__.py
-    │   │           │   ├── __pycache__
-    │   │           │   ├── _backends
-    │   │           │   ├── _core
-    │   │           │   ├── abc
-    │   │           │   ├── from_thread.py
-    │   │           │   ├── functools.py
-    │   │           │   ├── lowlevel.py
-    │   │           │   ├── py.typed
-    │   │           │   ├── pytest_plugin.py
-    │   │           │   ├── streams
-    │   │           │   ├── to_interpreter.py
-    │   │           │   ├── to_process.py
-    │   │           │   └── to_thread.py
     │   │           ├── anyio-4.12.0.dist-info
-    │   │           │   ├── INSTALLER
-    │   │           │   ├── METADATA
-    │   │           │   ├── RECORD
-    │   │           │   ├── WHEEL
-    │   │           │   ├── entry_points.txt
-    │   │           │   ├── licenses
-    │   │           │   └── top_level.txt
     │   │           ├── attr
-    │   │           │   ├── __init__.py
-    │   │           │   ├── __init__.pyi
-    │   │           │   ├── __pycache__
-    │   │           │   ├── _cmp.py
-    │   │           │   ├── _cmp.pyi
-    │   │           │   ├── _compat.py
-    │   │           │   ├── _config.py
-    │   │           │   ├── _funcs.py
-    │   │           │   ├── _make.py
-    │   │           │   ├── _next_gen.py
-    │   │           │   ├── _typing_compat.pyi
-    │   │           │   ├── _version_info.py
-    │   │           │   ├── _version_info.pyi
-    │   │           │   ├── converters.py
-    │   │           │   ├── converters.pyi
-    │   │           │   ├── exceptions.py
-    │   │           │   ├── exceptions.pyi
-    │   │           │   ├── filters.py
-    │   │           │   ├── filters.pyi
-    │   │           │   ├── py.typed
-    │   │           │   ├── setters.py
-    │   │           │   ├── setters.pyi
-    │   │           │   ├── validators.py
-    │   │           │   └── validators.pyi
     │   │           ├── attrs
-    │   │           │   ├── __init__.py
-    │   │           │   ├── __init__.pyi
-    │   │           │   ├── __pycache__
-    │   │           │   ├── converters.py
-    │   │           │   ├── exceptions.py
-    │   │           │   ├── filters.py
-    │   │           │   ├── py.typed
-    │   │           │   ├── setters.py
-    │   │           │   └── validators.py
     │   │           ├── attrs-25.4.0.dist-info
-    │   │           │   ├── INSTALLER
-    │   │           │   ├── METADATA
-    │   │           │   ├── RECORD
-    │   │           │   ├── WHEEL
-    │   │           │   └── licenses
     │   │           ├── certifi
-    │   │           │   ├── __init__.py
-    │   │           │   ├── __main__.py
-    │   │           │   ├── __pycache__
-    │   │           │   ├── cacert.pem
-    │   │           │   ├── core.py
-    │   │           │   └── py.typed
     │   │           ├── certifi-2025.11.12.dist-info
-    │   │           │   ├── INSTALLER
-    │   │           │   ├── METADATA
-    │   │           │   ├── RECORD
-    │   │           │   ├── WHEEL
-    │   │           │   ├── licenses
-    │   │           │   └── top_level.txt
     │   │           ├── charset_normalizer
-    │   │           │   ├── __init__.py
-    │   │           │   ├── __main__.py
-    │   │           │   ├── __pycache__
-    │   │           │   ├── api.py
-    │   │           │   ├── cd.py
-    │   │           │   ├── cli
-    │   │           │   ├── constant.py
-    │   │           │   ├── legacy.py
-    │   │           │   ├── md.cpython-313-darwin.so
-    │   │           │   ├── md.py
-    │   │           │   ├── md__mypyc.cpython-313-darwin.so
-    │   │           │   ├── models.py
-    │   │           │   ├── py.typed
-    │   │           │   ├── utils.py
-    │   │           │   └── version.py
     │   │           ├── charset_normalizer-3.4.4.dist-info
-    │   │           │   ├── INSTALLER
-    │   │           │   ├── METADATA
-    │   │           │   ├── RECORD
-    │   │           │   ├── WHEEL
-    │   │           │   ├── entry_points.txt
-    │   │           │   ├── licenses
-    │   │           │   └── top_level.txt
     │   │           ├── click
-    │   │           │   ├── __init__.py
-    │   │           │   ├── __pycache__
-    │   │           │   ├── _compat.py
-    │   │           │   ├── _termui_impl.py
-    │   │           │   ├── _textwrap.py
-    │   │           │   ├── _utils.py
-    │   │           │   ├── _winconsole.py
-    │   │           │   ├── core.py
-    │   │           │   ├── decorators.py
-    │   │           │   ├── exceptions.py
-    │   │           │   ├── formatting.py
-    │   │           │   ├── globals.py
-    │   │           │   ├── parser.py
-    │   │           │   ├── py.typed
-    │   │           │   ├── shell_completion.py
-    │   │           │   ├── termui.py
-    │   │           │   ├── testing.py
-    │   │           │   ├── types.py
-    │   │           │   └── utils.py
     │   │           ├── click-8.3.1.dist-info
-    │   │           │   ├── INSTALLER
-    │   │           │   ├── METADATA
-    │   │           │   ├── RECORD
-    │   │           │   ├── WHEEL
-    │   │           │   └── licenses
     │   │           ├── distro
-    │   │           │   ├── __init__.py
-    │   │           │   ├── __main__.py
-    │   │           │   ├── __pycache__
-    │   │           │   ├── distro.py
-    │   │           │   └── py.typed
     │   │           ├── distro-1.9.0.dist-info
-    │   │           │   ├── INSTALLER
-    │   │           │   ├── LICENSE
-    │   │           │   ├── METADATA
-    │   │           │   ├── RECORD
-    │   │           │   ├── WHEEL
-    │   │           │   ├── entry_points.txt
-    │   │           │   └── top_level.txt
     │   │           ├── dotenv
-    │   │           │   ├── __init__.py
-    │   │           │   ├── __main__.py
-    │   │           │   ├── __pycache__
-    │   │           │   ├── cli.py
-    │   │           │   ├── ipython.py
-    │   │           │   ├── main.py
-    │   │           │   ├── parser.py
-    │   │           │   ├── py.typed
-    │   │           │   ├── variables.py
-    │   │           │   └── version.py
     │   │           ├── frozenlist
-    │   │           │   ├── __init__.py
-    │   │           │   ├── __init__.pyi
-    │   │           │   ├── __pycache__
-    │   │           │   ├── _frozenlist.cpython-313-darwin.so
-    │   │           │   ├── _frozenlist.pyx
-    │   │           │   └── py.typed
     │   │           ├── frozenlist-1.8.0.dist-info
-    │   │           │   ├── INSTALLER
-    │   │           │   ├── METADATA
-    │   │           │   ├── RECORD
-    │   │           │   ├── WHEEL
-    │   │           │   ├── licenses
-    │   │           │   └── top_level.txt
     │   │           ├── git
-    │   │           │   ├── __init__.py
-    │   │           │   ├── __pycache__
-    │   │           │   ├── cmd.py
-    │   │           │   ├── compat.py
-    │   │           │   ├── config.py
-    │   │           │   ├── db.py
-    │   │           │   ├── diff.py
-    │   │           │   ├── exc.py
-    │   │           │   ├── index
-    │   │           │   ├── objects
-    │   │           │   ├── py.typed
-    │   │           │   ├── refs
-    │   │           │   ├── remote.py
-    │   │           │   ├── repo
-    │   │           │   ├── types.py
-    │   │           │   └── util.py
     │   │           ├── gitdb
-    │   │           │   ├── __init__.py
-    │   │           │   ├── __pycache__
-    │   │           │   ├── base.py
-    │   │           │   ├── const.py
-    │   │           │   ├── db
-    │   │           │   ├── exc.py
-    │   │           │   ├── fun.py
-    │   │           │   ├── pack.py
-    │   │           │   ├── stream.py
-    │   │           │   ├── test
-    │   │           │   ├── typ.py
-    │   │           │   ├── util.py
-    │   │           │   └── utils
     │   │           ├── gitdb-4.0.12.dist-info
-    │   │           │   ├── AUTHORS
-    │   │           │   ├── INSTALLER
-    │   │           │   ├── LICENSE
-    │   │           │   ├── METADATA
-    │   │           │   ├── RECORD
-    │   │           │   ├── WHEEL
-    │   │           │   └── top_level.txt
     │   │           ├── gitpython-3.1.45.dist-info
-    │   │           │   ├── INSTALLER
-    │   │           │   ├── METADATA
-    │   │           │   ├── RECORD
-    │   │           │   ├── WHEEL
-    │   │           │   ├── licenses
-    │   │           │   └── top_level.txt
     │   │           ├── h11
-    │   │           │   ├── __init__.py
-    │   │           │   ├── __pycache__
-    │   │           │   ├── _abnf.py
-    │   │           │   ├── _connection.py
-    │   │           │   ├── _events.py
-    │   │           │   ├── _headers.py
-    │   │           │   ├── _readers.py
-    │   │           │   ├── _receivebuffer.py
-    │   │           │   ├── _state.py
-    │   │           │   ├── _util.py
-    │   │           │   ├── _version.py
-    │   │           │   ├── _writers.py
-    │   │           │   └── py.typed
     │   │           ├── h11-0.16.0.dist-info
-    │   │           │   ├── INSTALLER
-    │   │           │   ├── METADATA
-    │   │           │   ├── RECORD
-    │   │           │   ├── WHEEL
-    │   │           │   ├── licenses
-    │   │           │   └── top_level.txt
     │   │           ├── httpcore
-    │   │           │   ├── __init__.py
-    │   │           │   ├── __pycache__
-    │   │           │   ├── _api.py
-    │   │           │   ├── _async
-    │   │           │   ├── _backends
-    │   │           │   ├── _exceptions.py
-    │   │           │   ├── _models.py
-    │   │           │   ├── _ssl.py
-    │   │           │   ├── _sync
-    │   │           │   ├── _synchronization.py
-    │   │           │   ├── _trace.py
-    │   │           │   ├── _utils.py
-    │   │           │   └── py.typed
     │   │           ├── httpcore-1.0.9.dist-info
-    │   │           │   ├── INSTALLER
-    │   │           │   ├── METADATA
-    │   │           │   ├── RECORD
-    │   │           │   ├── WHEEL
-    │   │           │   └── licenses
     │   │           ├── httpx
-    │   │           │   ├── __init__.py
-    │   │           │   ├── __pycache__
-    │   │           │   ├── __version__.py
-    │   │           │   ├── _api.py
-    │   │           │   ├── _auth.py
-    │   │           │   ├── _client.py
-    │   │           │   ├── _config.py
-    │   │           │   ├── _content.py
-    │   │           │   ├── _decoders.py
-    │   │           │   ├── _exceptions.py
-    │   │           │   ├── _main.py
-    │   │           │   ├── _models.py
-    │   │           │   ├── _multipart.py
-    │   │           │   ├── _status_codes.py
-    │   │           │   ├── _transports
-    │   │           │   ├── _types.py
-    │   │           │   ├── _urlparse.py
-    │   │           │   ├── _urls.py
-    │   │           │   ├── _utils.py
-    │   │           │   └── py.typed
     │   │           ├── httpx-0.28.1.dist-info
-    │   │           │   ├── INSTALLER
-    │   │           │   ├── METADATA
-    │   │           │   ├── RECORD
-    │   │           │   ├── WHEEL
-    │   │           │   ├── entry_points.txt
-    │   │           │   └── licenses
     │   │           ├── idna
-    │   │           │   ├── __init__.py
-    │   │           │   ├── __pycache__
-    │   │           │   ├── codec.py
-    │   │           │   ├── compat.py
-    │   │           │   ├── core.py
-    │   │           │   ├── idnadata.py
-    │   │           │   ├── intranges.py
-    │   │           │   ├── package_data.py
-    │   │           │   ├── py.typed
-    │   │           │   └── uts46data.py
     │   │           ├── idna-3.11.dist-info
-    │   │           │   ├── INSTALLER
-    │   │           │   ├── METADATA
-    │   │           │   ├── RECORD
-    │   │           │   ├── WHEEL
-    │   │           │   └── licenses
     │   │           ├── jiter
-    │   │           │   ├── __init__.py
-    │   │           │   ├── __init__.pyi
-    │   │           │   ├── __pycache__
-    │   │           │   ├── jiter.cpython-313-darwin.so
-    │   │           │   └── py.typed
     │   │           ├── jiter-0.12.0.dist-info
-    │   │           │   ├── INSTALLER
-    │   │           │   ├── METADATA
-    │   │           │   ├── RECORD
-    │   │           │   ├── WHEEL
-    │   │           │   └── licenses
     │   │           ├── multidict
-    │   │           │   ├── __init__.py
-    │   │           │   ├── __pycache__
-    │   │           │   ├── _abc.py
-    │   │           │   ├── _compat.py
-    │   │           │   ├── _multidict.cpython-313-darwin.so
-    │   │           │   ├── _multidict_py.py
-    │   │           │   └── py.typed
     │   │           ├── multidict-6.7.0.dist-info
-    │   │           │   ├── INSTALLER
-    │   │           │   ├── METADATA
-    │   │           │   ├── RECORD
-    │   │           │   ├── WHEEL
-    │   │           │   ├── licenses
-    │   │           │   └── top_level.txt
     │   │           ├── openai
-    │   │           │   ├── __init__.py
-    │   │           │   ├── __main__.py
-    │   │           │   ├── __pycache__
-    │   │           │   ├── _base_client.py
-    │   │           │   ├── _client.py
-    │   │           │   ├── _compat.py
-    │   │           │   ├── _constants.py
-    │   │           │   ├── _exceptions.py
-    │   │           │   ├── _extras
-    │   │           │   ├── _files.py
-    │   │           │   ├── _legacy_response.py
-    │   │           │   ├── _models.py
-    │   │           │   ├── _module_client.py
-    │   │           │   ├── _qs.py
-    │   │           │   ├── _resource.py
-    │   │           │   ├── _response.py
-    │   │           │   ├── _streaming.py
-    │   │           │   ├── _types.py
-    │   │           │   ├── _utils
-    │   │           │   ├── _version.py
-    │   │           │   ├── cli
-    │   │           │   ├── helpers
-    │   │           │   ├── lib
-    │   │           │   ├── pagination.py
-    │   │           │   ├── py.typed
-    │   │           │   ├── resources
-    │   │           │   ├── types
-    │   │           │   └── version.py
     │   │           ├── openai-2.12.0.dist-info
-    │   │           │   ├── INSTALLER
-    │   │           │   ├── METADATA
-    │   │           │   ├── RECORD
-    │   │           │   ├── WHEEL
-    │   │           │   ├── entry_points.txt
-    │   │           │   └── licenses
     │   │           ├── pip
-    │   │           │   ├── __init__.py
-    │   │           │   ├── __main__.py
-    │   │           │   ├── __pip-runner__.py
-    │   │           │   ├── __pycache__
-    │   │           │   ├── _internal
-    │   │           │   ├── _vendor
-    │   │           │   └── py.typed
     │   │           ├── pip-25.0.1.dist-info
-    │   │           │   ├── INSTALLER
-    │   │           │   ├── METADATA
-    │   │           │   ├── RECORD
-    │   │           │   ├── REQUESTED
-    │   │           │   ├── WHEEL
-    │   │           │   ├── entry_points.txt
-    │   │           │   ├── licenses
-    │   │           │   └── top_level.txt
     │   │           ├── propcache
-    │   │           │   ├── __init__.py
-    │   │           │   ├── __pycache__
-    │   │           │   ├── _helpers.py
-    │   │           │   ├── _helpers_c.cpython-313-darwin.so
-    │   │           │   ├── _helpers_c.pyx
-    │   │           │   ├── _helpers_py.py
-    │   │           │   ├── api.py
-    │   │           │   └── py.typed
     │   │           ├── propcache-0.4.1.dist-info
-    │   │           │   ├── INSTALLER
-    │   │           │   ├── METADATA
-    │   │           │   ├── RECORD
-    │   │           │   ├── WHEEL
-    │   │           │   ├── licenses
-    │   │           │   └── top_level.txt
     │   │           ├── pydantic
-    │   │           │   ├── __init__.py
-    │   │           │   ├── __pycache__
-    │   │           │   ├── _internal
-    │   │           │   ├── _migration.py
-    │   │           │   ├── alias_generators.py
-    │   │           │   ├── aliases.py
-    │   │           │   ├── annotated_handlers.py
-    │   │           │   ├── class_validators.py
-    │   │           │   ├── color.py
-    │   │           │   ├── config.py
-    │   │           │   ├── dataclasses.py
-    │   │           │   ├── datetime_parse.py
-    │   │           │   ├── decorator.py
-    │   │           │   ├── deprecated
-    │   │           │   ├── env_settings.py
-    │   │           │   ├── error_wrappers.py
-    │   │           │   ├── errors.py
-    │   │           │   ├── experimental
-    │   │           │   ├── fields.py
-    │   │           │   ├── functional_serializers.py
-    │   │           │   ├── functional_validators.py
-    │   │           │   ├── generics.py
-    │   │           │   ├── json.py
-    │   │           │   ├── json_schema.py
-    │   │           │   ├── main.py
-    │   │           │   ├── mypy.py
-    │   │           │   ├── networks.py
-    │   │           │   ├── parse.py
-    │   │           │   ├── plugin
-    │   │           │   ├── py.typed
-    │   │           │   ├── root_model.py
-    │   │           │   ├── schema.py
-    │   │           │   ├── tools.py
-    │   │           │   ├── type_adapter.py
-    │   │           │   ├── types.py
-    │   │           │   ├── typing.py
-    │   │           │   ├── utils.py
-    │   │           │   ├── v1
-    │   │           │   ├── validate_call_decorator.py
-    │   │           │   ├── validators.py
-    │   │           │   ├── version.py
-    │   │           │   └── warnings.py
     │   │           ├── pydantic-2.12.5.dist-info
-    │   │           │   ├── INSTALLER
-    │   │           │   ├── METADATA
-    │   │           │   ├── RECORD
-    │   │           │   ├── WHEEL
-    │   │           │   └── licenses
     │   │           ├── pydantic_core
-    │   │           │   ├── __init__.py
-    │   │           │   ├── __pycache__
-    │   │           │   ├── _pydantic_core.cpython-313-darwin.so
-    │   │           │   ├── _pydantic_core.pyi
-    │   │           │   ├── core_schema.py
-    │   │           │   └── py.typed
     │   │           ├── pydantic_core-2.41.5.dist-info
-    │   │           │   ├── INSTALLER
-    │   │           │   ├── METADATA
-    │   │           │   ├── RECORD
-    │   │           │   ├── WHEEL
-    │   │           │   └── licenses
     │   │           ├── pydantic_extra_types
-    │   │           │   ├── __init__.py
-    │   │           │   ├── __pycache__
-    │   │           │   ├── color.py
-    │   │           │   ├── coordinate.py
-    │   │           │   ├── country.py
-    │   │           │   ├── cron.py
-    │   │           │   ├── currency_code.py
-    │   │           │   ├── domain.py
-    │   │           │   ├── epoch.py
-    │   │           │   ├── isbn.py
-    │   │           │   ├── language_code.py
-    │   │           │   ├── mac_address.py
-    │   │           │   ├── mongo_object_id.py
-    │   │           │   ├── path.py
-    │   │           │   ├── payment.py
-    │   │           │   ├── pendulum_dt.py
-    │   │           │   ├── phone_numbers.py
-    │   │           │   ├── py.typed
-    │   │           │   ├── routing_number.py
-    │   │           │   ├── s3.py
-    │   │           │   ├── script_code.py
-    │   │           │   ├── semantic_version.py
-    │   │           │   ├── semver.py
-    │   │           │   ├── timezone_name.py
-    │   │           │   └── ulid.py
     │   │           ├── pydantic_extra_types-2.10.6.dist-info
-    │   │           │   ├── INSTALLER
-    │   │           │   ├── METADATA
-    │   │           │   ├── RECORD
-    │   │           │   ├── WHEEL
-    │   │           │   └── licenses
     │   │           ├── pydantic_settings
-    │   │           │   ├── __init__.py
-    │   │           │   ├── __pycache__
-    │   │           │   ├── exceptions.py
-    │   │           │   ├── main.py
-    │   │           │   ├── py.typed
-    │   │           │   ├── sources
-    │   │           │   ├── utils.py
-    │   │           │   └── version.py
     │   │           ├── pydantic_settings-2.12.0.dist-info
-    │   │           │   ├── INSTALLER
-    │   │           │   ├── METADATA
-    │   │           │   ├── RECORD
-    │   │           │   ├── WHEEL
-    │   │           │   └── licenses
     │   │           ├── python_dotenv-1.2.1.dist-info
-    │   │           │   ├── INSTALLER
-    │   │           │   ├── METADATA
-    │   │           │   ├── RECORD
-    │   │           │   ├── WHEEL
-    │   │           │   ├── entry_points.txt
-    │   │           │   ├── licenses
-    │   │           │   └── top_level.txt
     │   │           ├── pyyaml-6.0.3.dist-info
-    │   │           │   ├── INSTALLER
-    │   │           │   ├── METADATA
-    │   │           │   ├── RECORD
-    │   │           │   ├── WHEEL
-    │   │           │   ├── licenses
-    │   │           │   └── top_level.txt
     │   │           ├── readmeai
-    │   │           │   ├── __init__.py
-    │   │           │   ├── __pycache__
-    │   │           │   ├── assets
-    │   │           │   ├── cli
-    │   │           │   ├── config
-    │   │           │   ├── core
-    │   │           │   ├── extractors
-    │   │           │   ├── generators
-    │   │           │   ├── models
-    │   │           │   ├── parsers
-    │   │           │   ├── postprocessor
-    │   │           │   ├── preprocessor
-    │   │           │   ├── retrievers
-    │   │           │   └── utils
     │   │           ├── readmeai-0.6.3.dist-info
-    │   │           │   ├── INSTALLER
-    │   │           │   ├── LICENSE
-    │   │           │   ├── METADATA
-    │   │           │   ├── RECORD
-    │   │           │   ├── REQUESTED
-    │   │           │   ├── WHEEL
-    │   │           │   └── entry_points.txt
     │   │           ├── regex
-    │   │           │   ├── __init__.py
-    │   │           │   ├── __pycache__
-    │   │           │   ├── _main.py
-    │   │           │   ├── _regex.cpython-313-darwin.so
-    │   │           │   ├── _regex_core.py
-    │   │           │   └── tests
     │   │           ├── regex-2025.11.3.dist-info
-    │   │           │   ├── INSTALLER
-    │   │           │   ├── METADATA
-    │   │           │   ├── RECORD
-    │   │           │   ├── WHEEL
-    │   │           │   ├── licenses
-    │   │           │   └── top_level.txt
     │   │           ├── requests
-    │   │           │   ├── __init__.py
-    │   │           │   ├── __pycache__
-    │   │           │   ├── __version__.py
-    │   │           │   ├── _internal_utils.py
-    │   │           │   ├── adapters.py
-    │   │           │   ├── api.py
-    │   │           │   ├── auth.py
-    │   │           │   ├── certs.py
-    │   │           │   ├── compat.py
-    │   │           │   ├── cookies.py
-    │   │           │   ├── exceptions.py
-    │   │           │   ├── help.py
-    │   │           │   ├── hooks.py
-    │   │           │   ├── models.py
-    │   │           │   ├── packages.py
-    │   │           │   ├── sessions.py
-    │   │           │   ├── status_codes.py
-    │   │           │   ├── structures.py
-    │   │           │   └── utils.py
     │   │           ├── requests-2.32.5.dist-info
-    │   │           │   ├── INSTALLER
-    │   │           │   ├── METADATA
-    │   │           │   ├── RECORD
-    │   │           │   ├── WHEEL
-    │   │           │   ├── licenses
-    │   │           │   └── top_level.txt
     │   │           ├── smmap
-    │   │           │   ├── __init__.py
-    │   │           │   ├── __pycache__
-    │   │           │   ├── buf.py
-    │   │           │   ├── mman.py
-    │   │           │   ├── test
-    │   │           │   └── util.py
     │   │           ├── smmap-5.0.2.dist-info
-    │   │           │   ├── INSTALLER
-    │   │           │   ├── LICENSE
-    │   │           │   ├── METADATA
-    │   │           │   ├── RECORD
-    │   │           │   ├── WHEEL
-    │   │           │   ├── top_level.txt
-    │   │           │   └── zip-safe
     │   │           ├── sniffio
-    │   │           │   ├── __init__.py
-    │   │           │   ├── __pycache__
-    │   │           │   ├── _impl.py
-    │   │           │   ├── _tests
-    │   │           │   ├── _version.py
-    │   │           │   └── py.typed
     │   │           ├── sniffio-1.3.1.dist-info
-    │   │           │   ├── INSTALLER
-    │   │           │   ├── LICENSE
-    │   │           │   ├── LICENSE.APACHE2
-    │   │           │   ├── LICENSE.MIT
-    │   │           │   ├── METADATA
-    │   │           │   ├── RECORD
-    │   │           │   ├── WHEEL
-    │   │           │   └── top_level.txt
     │   │           ├── structlog
-    │   │           │   ├── __init__.py
-    │   │           │   ├── __pycache__
-    │   │           │   ├── _base.py
-    │   │           │   ├── _config.py
-    │   │           │   ├── _frames.py
-    │   │           │   ├── _generic.py
-    │   │           │   ├── _greenlets.py
-    │   │           │   ├── _log_levels.py
-    │   │           │   ├── _native.py
-    │   │           │   ├── _output.py
-    │   │           │   ├── _utils.py
-    │   │           │   ├── contextvars.py
-    │   │           │   ├── dev.py
-    │   │           │   ├── exceptions.py
-    │   │           │   ├── processors.py
-    │   │           │   ├── py.typed
-    │   │           │   ├── stdlib.py
-    │   │           │   ├── testing.py
-    │   │           │   ├── threadlocal.py
-    │   │           │   ├── tracebacks.py
-    │   │           │   ├── twisted.py
-    │   │           │   ├── types.py
-    │   │           │   └── typing.py
     │   │           ├── structlog-24.4.0.dist-info
-    │   │           │   ├── INSTALLER
-    │   │           │   ├── METADATA
-    │   │           │   ├── RECORD
-    │   │           │   ├── WHEEL
-    │   │           │   └── licenses
     │   │           ├── tenacity
-    │   │           │   ├── __init__.py
-    │   │           │   ├── __pycache__
-    │   │           │   ├── _utils.py
-    │   │           │   ├── after.py
-    │   │           │   ├── asyncio
-    │   │           │   ├── before.py
-    │   │           │   ├── before_sleep.py
-    │   │           │   ├── nap.py
-    │   │           │   ├── py.typed
-    │   │           │   ├── retry.py
-    │   │           │   ├── stop.py
-    │   │           │   ├── tornadoweb.py
-    │   │           │   └── wait.py
     │   │           ├── tenacity-8.5.0.dist-info
-    │   │           │   ├── INSTALLER
-    │   │           │   ├── LICENSE
-    │   │           │   ├── METADATA
-    │   │           │   ├── RECORD
-    │   │           │   ├── WHEEL
-    │   │           │   └── top_level.txt
     │   │           ├── tiktoken
-    │   │           │   ├── __init__.py
-    │   │           │   ├── __pycache__
-    │   │           │   ├── _tiktoken.cpython-313-darwin.so
-    │   │           │   ├── core.py
-    │   │           │   ├── load.py
-    │   │           │   ├── model.py
-    │   │           │   ├── py.typed
-    │   │           │   └── registry.py
     │   │           ├── tiktoken-0.4.0.dist-info
-    │   │           │   ├── INSTALLER
-    │   │           │   ├── METADATA
-    │   │           │   ├── RECORD
-    │   │           │   ├── WHEEL
-    │   │           │   ├── licenses
-    │   │           │   └── top_level.txt
     │   │           ├── tiktoken_ext
-    │   │           │   ├── __pycache__
-    │   │           │   └── openai_public.py
     │   │           ├── tqdm
-    │   │           │   ├── __init__.py
-    │   │           │   ├── __main__.py
-    │   │           │   ├── __pycache__
-    │   │           │   ├── _dist_ver.py
-    │   │           │   ├── _main.py
-    │   │           │   ├── _monitor.py
-    │   │           │   ├── _tqdm.py
-    │   │           │   ├── _tqdm_gui.py
-    │   │           │   ├── _tqdm_notebook.py
-    │   │           │   ├── _tqdm_pandas.py
-    │   │           │   ├── _utils.py
-    │   │           │   ├── asyncio.py
-    │   │           │   ├── auto.py
-    │   │           │   ├── autonotebook.py
-    │   │           │   ├── cli.py
-    │   │           │   ├── completion.sh
-    │   │           │   ├── contrib
-    │   │           │   ├── dask.py
-    │   │           │   ├── gui.py
-    │   │           │   ├── keras.py
-    │   │           │   ├── notebook.py
-    │   │           │   ├── rich.py
-    │   │           │   ├── std.py
-    │   │           │   ├── tk.py
-    │   │           │   ├── tqdm.1
-    │   │           │   ├── utils.py
-    │   │           │   └── version.py
     │   │           ├── tqdm-4.67.1.dist-info
-    │   │           │   ├── INSTALLER
-    │   │           │   ├── LICENCE
-    │   │           │   ├── METADATA
-    │   │           │   ├── RECORD
-    │   │           │   ├── WHEEL
-    │   │           │   ├── entry_points.txt
-    │   │           │   └── top_level.txt
     │   │           ├── typing_extensions-4.15.0.dist-info
-    │   │           │   ├── INSTALLER
-    │   │           │   ├── METADATA
-    │   │           │   ├── RECORD
-    │   │           │   ├── WHEEL
-    │   │           │   └── licenses
     │   │           ├── typing_extensions.py
     │   │           ├── typing_inspection
-    │   │           │   ├── __init__.py
-    │   │           │   ├── __pycache__
-    │   │           │   ├── introspection.py
-    │   │           │   ├── py.typed
-    │   │           │   ├── typing_objects.py
-    │   │           │   └── typing_objects.pyi
     │   │           ├── typing_inspection-0.4.2.dist-info
-    │   │           │   ├── INSTALLER
-    │   │           │   ├── METADATA
-    │   │           │   ├── RECORD
-    │   │           │   ├── WHEEL
-    │   │           │   └── licenses
     │   │           ├── urllib3
-    │   │           │   ├── __init__.py
-    │   │           │   ├── __pycache__
-    │   │           │   ├── _base_connection.py
-    │   │           │   ├── _collections.py
-    │   │           │   ├── _request_methods.py
-    │   │           │   ├── _version.py
-    │   │           │   ├── connection.py
-    │   │           │   ├── connectionpool.py
-    │   │           │   ├── contrib
-    │   │           │   ├── exceptions.py
-    │   │           │   ├── fields.py
-    │   │           │   ├── filepost.py
-    │   │           │   ├── http2
-    │   │           │   ├── poolmanager.py
-    │   │           │   ├── py.typed
-    │   │           │   ├── response.py
-    │   │           │   └── util
     │   │           ├── urllib3-2.6.2.dist-info
-    │   │           │   ├── INSTALLER
-    │   │           │   ├── METADATA
-    │   │           │   ├── RECORD
-    │   │           │   ├── WHEEL
-    │   │           │   └── licenses
     │   │           ├── yaml
-    │   │           │   ├── __init__.py
-    │   │           │   ├── __pycache__
-    │   │           │   ├── _yaml.cpython-313-darwin.so
-    │   │           │   ├── composer.py
-    │   │           │   ├── constructor.py
-    │   │           │   ├── cyaml.py
-    │   │           │   ├── dumper.py
-    │   │           │   ├── emitter.py
-    │   │           │   ├── error.py
-    │   │           │   ├── events.py
-    │   │           │   ├── loader.py
-    │   │           │   ├── nodes.py
-    │   │           │   ├── parser.py
-    │   │           │   ├── reader.py
-    │   │           │   ├── representer.py
-    │   │           │   ├── resolver.py
-    │   │           │   ├── scanner.py
-    │   │           │   ├── serializer.py
-    │   │           │   └── tokens.py
     │   │           ├── yarl
-    │   │           │   ├── __init__.py
-    │   │           │   ├── __pycache__
-    │   │           │   ├── _parse.py
-    │   │           │   ├── _path.py
-    │   │           │   ├── _query.py
-    │   │           │   ├── _quoters.py
-    │   │           │   ├── _quoting.py
-    │   │           │   ├── _quoting_c.cpython-313-darwin.so
-    │   │           │   ├── _quoting_c.pyx
-    │   │           │   ├── _quoting_py.py
-    │   │           │   ├── _url.py
-    │   │           │   └── py.typed
     │   │           └── yarl-1.22.0.dist-info
-    │   │               ├── INSTALLER
-    │   │               ├── METADATA
-    │   │               ├── RECORD
-    │   │               ├── WHEEL
-    │   │               ├── licenses
-    │   │               └── top_level.txt
     │   └── pyvenv.cfg
     ├── settings.gradle.kts
     └── shared
@@ -1366,164 +464,111 @@
         │   ├── generated
         │   │   ├── kotlin
         │   │   │   ├── generateAndroidDebugBuildConfigClasses
-        │   │   │   │   └── NewsAndFeed
         │   │   │   └── generateAndroidReleaseBuildConfigClasses
-        │   │   │       └── NewsAndFeed
         │   │   ├── res
         │   │   │   ├── pngs
         │   │   │   └── resValues
-        │   │   │       ├── androidTest
         │   │   ├── sources
         │   │   │   └── buildConfig
-        │   │   │       ├── iosArm64Main
-        │   │   │       ├── iosSimulatorArm64Main
-        │   │   │       └── main
         │   │   └── sqldelight
         │   │       └── code
-        │   │           └── NewsDatabase
         │   ├── intermediates
         │   │   ├── aapt_friendly_merged_manifests
         │   │   │   └── debug
-        │   │   │       └── processDebugManifest
         │   │   ├── aar_metadata
         │   │   │   └── debug
-        │   │   │       └── writeDebugAarMetadata
         │   │   ├── aar_metadata_check
         │   │   │   └── debugAndroidTest
         │   │   ├── annotation_processor_list
         │   │   │   ├── debug
-        │   │   │   │   └── javaPreCompileDebug
         │   │   │   ├── debugAndroidTest
-        │   │   │   │   └── javaPreCompileDebugAndroidTest
         │   │   │   └── debugUnitTest
-        │   │   │       └── javaPreCompileDebugUnitTest
         │   │   ├── assets
         │   │   │   ├── debug
         │   │   │   └── debugAndroidTest
         │   │   ├── compile_and_runtime_not_namespaced_r_class_jar
         │   │   │   ├── debugAndroidTest
-        │   │   │   │   └── processDebugAndroidTestResources
         │   │   │   └── debugUnitTest
-        │   │   │       └── generateDebugUnitTestStubRFile
         │   │   ├── compile_r_class_jar
         │   │   │   └── debug
-        │   │   │       └── generateDebugRFile
         │   │   ├── compile_symbol_list
         │   │   │   └── debug
-        │   │   │       └── generateDebugRFile
         │   │   ├── compiled_local_resources
         │   │   │   └── debug
-        │   │   │       └── compileDebugLibraryResources
         │   │   ├── compressed_assets
         │   │   │   └── debugAndroidTest
-        │   │   │       └── compressDebugAndroidTestAssets
         │   │   ├── data_binding_layout_info_type_merge
         │   │   │   └── debugAndroidTest
-        │   │   │       └── mergeDebugAndroidTestResources
         │   │   ├── data_binding_layout_info_type_package
         │   │   │   └── debug
-        │   │   │       └── packageDebugResources
         │   │   ├── dex
         │   │   │   └── debugAndroidTest
-        │   │   │       └── mergeExtDexDebugAndroidTest
         │   │   ├── duplicate_classes_check
         │   │   │   └── debugAndroidTest
         │   │   ├── external_file_lib_dex_archives
         │   │   │   └── debugAndroidTest
         │   │   ├── incremental
         │   │   │   ├── debug
-        │   │   │   │   └── packageDebugResources
         │   │   │   ├── debugAndroidTest
-        │   │   │   │   └── mergeDebugAndroidTestResources
         │   │   │   ├── mergeDebugAndroidTestAssets
-        │   │   │   │   └── merger.xml
         │   │   │   ├── mergeDebugAndroidTestJniLibFolders
-        │   │   │   │   └── merger.xml
         │   │   │   ├── mergeDebugAndroidTestShaders
-        │   │   │   │   └── merger.xml
         │   │   │   ├── mergeDebugAssets
-        │   │   │   │   └── merger.xml
         │   │   │   ├── mergeDebugJniLibFolders
-        │   │   │   │   └── merger.xml
         │   │   │   └── mergeDebugShaders
-        │   │   │       └── merger.xml
         │   │   ├── library_and_local_jars_jni
         │   │   │   └── debug
-        │   │   │       └── copyDebugJniLibsProjectAndLocalJars
         │   │   ├── library_art_profile
         │   │   │   └── debug
         │   │   ├── library_jni
         │   │   │   └── debug
-        │   │   │       └── copyDebugJniLibsProjectOnly
         │   │   ├── linked_resources_binary_format
         │   │   │   └── debugAndroidTest
-        │   │   │       └── processDebugAndroidTestResources
         │   │   ├── lint_publish_jar
         │   │   │   └── global
         │   │   ├── local_only_symbol_list
         │   │   │   └── debug
-        │   │   │       └── parseDebugLocalResources
         │   │   ├── manifest_merge_blame_file
         │   │   │   ├── debug
-        │   │   │   │   └── processDebugManifest
         │   │   │   └── debugAndroidTest
-        │   │   │       └── processDebugAndroidTestManifest
         │   │   ├── merged_jni_libs
         │   │   │   ├── debug
-        │   │   │   │   └── mergeDebugJniLibFolders
         │   │   │   └── debugAndroidTest
-        │   │   │       └── mergeDebugAndroidTestJniLibFolders
         │   │   ├── merged_manifest
         │   │   │   └── debug
-        │   │   │       └── processDebugManifest
         │   │   ├── merged_res
         │   │   │   └── debugAndroidTest
-        │   │   │       └── mergeDebugAndroidTestResources
         │   │   ├── merged_res_blame_folder
         │   │   │   └── debugAndroidTest
-        │   │   │       └── mergeDebugAndroidTestResources
         │   │   ├── merged_shaders
         │   │   │   ├── debug
-        │   │   │   │   └── mergeDebugShaders
         │   │   │   └── debugAndroidTest
-        │   │   │       └── mergeDebugAndroidTestShaders
         │   │   ├── navigation_json
         │   │   │   └── debug
-        │   │   │       └── extractDeepLinksDebug
         │   │   ├── navigation_json_for_aar
         │   │   │   └── debug
         │   │   ├── nested_resources_validation_report
         │   │   │   ├── debug
-        │   │   │   │   └── generateDebugResources
         │   │   │   └── debugAndroidTest
-        │   │   │       └── generateDebugAndroidTestResources
         │   │   ├── packaged_manifests
         │   │   │   └── debugAndroidTest
-        │   │   │       └── processDebugAndroidTestManifest
         │   │   ├── packaged_res
         │   │   │   └── debug
         │   │   ├── public_res
         │   │   │   └── debug
         │   │   ├── runtime_symbol_list
         │   │   │   └── debugAndroidTest
-        │   │   │       └── processDebugAndroidTestResources
         │   │   ├── signing_config_versions
         │   │   │   └── debugAndroidTest
-        │   │   │       └── writeDebugAndroidTestSigningConfigVersions
         │   │   ├── source_set_path_map
         │   │   │   └── debugAndroidTest
-        │   │   │       └── mapDebugAndroidTestSourceSetPaths
         │   │   ├── stable_resource_ids_file
         │   │   │   └── debugAndroidTest
-        │   │   │       └── processDebugAndroidTestResources
         │   │   ├── symbol_list_with_package_name
         │   │   │   ├── debug
-        │   │   │   │   └── generateDebugRFile
         │   │   │   └── debugAndroidTest
-        │   │   │       └── processDebugAndroidTestResources
         │   │   ├── tmp
         │   │   │   └── manifest
-        │   │   │       └── androidTest
         │   │   └── validate_signing_config
         │   │       └── debugAndroidTest
         │   ├── internal
@@ -1531,8 +576,6 @@
         │   │   ├── commonizedNativeDistributionLocation.txt
         │   │   └── compileDebugKotlinAndroid
         │   │       ├── cacheable
-        │   │       │   ├── caches-jvm
-        │   │       │   └── dirty-sources.txt
         │   ├── kotlinProjectStructureMetadata
         │   │   └── kotlin-project-structure-metadata.json
         │   ├── outputs
@@ -1546,29 +589,22 @@
             ├── androidMain
             │   └── kotlin
             │       └── com
-            │           └── newsandfeed
             ├── commonMain
             │   ├── .DS_Store
             │   ├── kotlin
             │   │   ├── .DS_Store
             │   │   └── com
-            │   │       ├── .DS_Store
-            │   │       └── newsandfeed
             │   └── sqldelight
             │       ├── com
             │       └── migrations
-            │           └── 1.sqm
             ├── commonTest
             │   └── kotlin
             │       └── com
-            │           └── newsandfeed
             └── iosMain
                 ├── .DS_Store
                 └── kotlin
                     ├── .DS_Store
                     └── com
-                        ├── .DS_Store
-                        └── newsandfeed
 ```
 
 ### Project Index
