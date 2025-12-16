@@ -1,2 +1,7 @@
+# Ignora tudo
 *
-!shared/**
+
+# Libera apenas o commonMain
+!shared/
+!shared/src/
+!shared/src/commonMain/**
