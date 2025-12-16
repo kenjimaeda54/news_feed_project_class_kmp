@@ -4,11 +4,11 @@
 <div align="center">
 
 ```console
- ████   ████  ██   ██ ██   ██  ████  ██   ██ ██   ██   ██   ██████ ██   ██ 
-██     ██  ██ ███ ███ ███ ███ ██  ██ ███  ██ ███ ███  ████    ██   ███  ██ 
-██     ██  ██ ██ █ ██ ██ █ ██ ██  ██ ██ █ ██ ██ █ ██ ██  ██   ██   ██ █ ██ 
-██     ██  ██ ██   ██ ██   ██ ██  ██ ██  ███ ██   ██ ██████   ██   ██  ███ 
- ████   ████  ██   ██ ██   ██  ████  ██   ██ ██   ██ ██  ██ ██████ ██   ██ 
+██   ██ ██████ ██   ██  ████    ██   ██   ██ ████   ██████ ██████ ██████ ████   
+███  ██ ██     ██   ██ ██      ████  ███  ██ ██  ██ ██     ██     ██     ██  ██ 
+██ █ ██ ████   ██ █ ██  ████  ██  ██ ██ █ ██ ██  ██ ████   ████   ████   ██  ██ 
+██  ███ ██     ███ ███     ██ ██████ ██  ███ ██  ██ ██     ██     ██     ██  ██ 
+██   ██ ██████ ██   ██ █████  ██  ██ ██   ██ ████   ██     ██████ ██████ ████   
 
 
 ```
@@ -59,22 +59,52 @@
 ## 🌌 Project Structure
 
 ```sh
-└── commonMain/
-    ├── kotlin
+└── newsandfeed/
+    ├── data
     │   ├── .DS_Store
-    │   └── com
+    │   ├── dto
+    │   │   ├── ArticleDto.kt
+    │   │   ├── NewsDto.kt
+    │   │   └── SourceDto.kt
+    │   ├── remote
+    │   │   ├── .DS_Store
+    │   │   └── RemoteDataSource.kt
+    │   └── repository
+    │       └── ArticleRepositoryImpl.kt
+    ├── di
+    │   ├── CommonModule.kt
+    │   └── DriverSqlModule.kt
+    ├── domain
+    │   ├── .DS_Store
+    │   ├── entity
+    │   │   ├── .DS_Store
+    │   │   ├── ArticleEntity.kt
+    │   │   └── DataOrException.kt
+    │   ├── mapper
+    │   │   └── articles
+    │   ├── repository
+    │   │   └── ArticleRepository.kt
+    │   └── usecase
     │       ├── .DS_Store
-    │       └── newsandfeed
-    └── sqldelight
-        ├── com
-        └── migrations
-            └── 1.sqm
+    │       └── article
+    ├── infra
+    │   └── remote
+    │       ├── KtorApi.kt
+    │       └── KtorApiImpl.kt
+    ├── ui
+    │   ├── .DS_Store
+    │   └── features
+    │       ├── .DS_Store
+    │       └── home
+    └── util
+        ├── CFlow.kt
+        └── CoroutineViewModel.kt
 ```
 
 ### ✨ Project Index
 
 <details open>
-	<summary><b><code>COMMONMAIN/</code></b></summary>
+	<summary><b><code>NEWSANDFEED/</code></b></summary>
 	<!-- __root__ Submodule -->
 	<details>
 		<summary><b>__root__</b></summary>
@@ -91,18 +121,66 @@
 			</table>
 		</blockquote>
 	</details>
-	<!-- sqldelight Submodule -->
+	<!-- di Submodule -->
 	<details>
-		<summary><b>sqldelight</b></summary>
+		<summary><b>di</b></summary>
 		<blockquote>
 			<div class='directory-path' style='padding: 8px 0; color: #666;'>
-				<code><b>⦿ sqldelight</b></code>
-			<!-- migrations Submodule -->
+				<code><b>⦿ di</b></code>
+			<table style='width: 100%; border-collapse: collapse;'>
+			<thead>
+				<tr style='background-color: #f8f9fa;'>
+					<th style='width: 30%; text-align: left; padding: 8px;'>File Name</th>
+					<th style='text-align: left; padding: 8px;'>Summary</th>
+				</tr>
+			</thead>
+				<tr style='border-bottom: 1px solid #eee;'>
+					<td style='padding: 8px;'><b><a href='shared/src/commonMain/kotlin/com/newsandfeed/blob/master/di/DriverSqlModule.kt'>DriverSqlModule.kt</a></b></td>
+					<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+				</tr>
+				<tr style='border-bottom: 1px solid #eee;'>
+					<td style='padding: 8px;'><b><a href='shared/src/commonMain/kotlin/com/newsandfeed/blob/master/di/CommonModule.kt'>CommonModule.kt</a></b></td>
+					<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+				</tr>
+			</table>
+		</blockquote>
+	</details>
+	<!-- util Submodule -->
+	<details>
+		<summary><b>util</b></summary>
+		<blockquote>
+			<div class='directory-path' style='padding: 8px 0; color: #666;'>
+				<code><b>⦿ util</b></code>
+			<table style='width: 100%; border-collapse: collapse;'>
+			<thead>
+				<tr style='background-color: #f8f9fa;'>
+					<th style='width: 30%; text-align: left; padding: 8px;'>File Name</th>
+					<th style='text-align: left; padding: 8px;'>Summary</th>
+				</tr>
+			</thead>
+				<tr style='border-bottom: 1px solid #eee;'>
+					<td style='padding: 8px;'><b><a href='shared/src/commonMain/kotlin/com/newsandfeed/blob/master/util/CFlow.kt'>CFlow.kt</a></b></td>
+					<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+				</tr>
+				<tr style='border-bottom: 1px solid #eee;'>
+					<td style='padding: 8px;'><b><a href='shared/src/commonMain/kotlin/com/newsandfeed/blob/master/util/CoroutineViewModel.kt'>CoroutineViewModel.kt</a></b></td>
+					<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+				</tr>
+			</table>
+		</blockquote>
+	</details>
+	<!-- domain Submodule -->
+	<details>
+		<summary><b>domain</b></summary>
+		<blockquote>
+			<div class='directory-path' style='padding: 8px 0; color: #666;'>
+				<code><b>⦿ domain</b></code>
+			<!-- repository Submodule -->
 			<details>
-				<summary><b>migrations</b></summary>
+				<summary><b>repository</b></summary>
 				<blockquote>
 					<div class='directory-path' style='padding: 8px 0; color: #666;'>
-						<code><b>⦿ sqldelight.migrations</b></code>
+						<code><b>⦿ domain.repository</b></code>
 					<table style='width: 100%; border-collapse: collapse;'>
 					<thead>
 						<tr style='background-color: #f8f9fa;'>
@@ -111,7 +189,123 @@
 						</tr>
 					</thead>
 						<tr style='border-bottom: 1px solid #eee;'>
-							<td style='padding: 8px;'><b><a href='shared/src/commonMain/blob/master/sqldelight/migrations/1.sqm'>1.sqm</a></b></td>
+							<td style='padding: 8px;'><b><a href='shared/src/commonMain/kotlin/com/newsandfeed/blob/master/domain/repository/ArticleRepository.kt'>ArticleRepository.kt</a></b></td>
+							<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+						</tr>
+					</table>
+				</blockquote>
+			</details>
+			<!-- entity Submodule -->
+			<details>
+				<summary><b>entity</b></summary>
+				<blockquote>
+					<div class='directory-path' style='padding: 8px 0; color: #666;'>
+						<code><b>⦿ domain.entity</b></code>
+					<table style='width: 100%; border-collapse: collapse;'>
+					<thead>
+						<tr style='background-color: #f8f9fa;'>
+							<th style='width: 30%; text-align: left; padding: 8px;'>File Name</th>
+							<th style='text-align: left; padding: 8px;'>Summary</th>
+						</tr>
+					</thead>
+						<tr style='border-bottom: 1px solid #eee;'>
+							<td style='padding: 8px;'><b><a href='shared/src/commonMain/kotlin/com/newsandfeed/blob/master/domain/entity/ArticleEntity.kt'>ArticleEntity.kt</a></b></td>
+							<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+						</tr>
+						<tr style='border-bottom: 1px solid #eee;'>
+							<td style='padding: 8px;'><b><a href='shared/src/commonMain/kotlin/com/newsandfeed/blob/master/domain/entity/DataOrException.kt'>DataOrException.kt</a></b></td>
+							<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+						</tr>
+					</table>
+				</blockquote>
+			</details>
+			<!-- usecase Submodule -->
+			<details>
+				<summary><b>usecase</b></summary>
+				<blockquote>
+					<div class='directory-path' style='padding: 8px 0; color: #666;'>
+						<code><b>⦿ domain.usecase</b></code>
+					<!-- article Submodule -->
+					<details>
+						<summary><b>article</b></summary>
+						<blockquote>
+							<div class='directory-path' style='padding: 8px 0; color: #666;'>
+								<code><b>⦿ domain.usecase.article</b></code>
+							<table style='width: 100%; border-collapse: collapse;'>
+							<thead>
+								<tr style='background-color: #f8f9fa;'>
+									<th style='width: 30%; text-align: left; padding: 8px;'>File Name</th>
+									<th style='text-align: left; padding: 8px;'>Summary</th>
+								</tr>
+							</thead>
+								<tr style='border-bottom: 1px solid #eee;'>
+									<td style='padding: 8px;'><b><a href='shared/src/commonMain/kotlin/com/newsandfeed/blob/master/domain/usecase/article/GetAllArticleUseCase.kt'>GetAllArticleUseCase.kt</a></b></td>
+									<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+								</tr>
+								<tr style='border-bottom: 1px solid #eee;'>
+									<td style='padding: 8px;'><b><a href='shared/src/commonMain/kotlin/com/newsandfeed/blob/master/domain/usecase/article/GetOnlyTopicArticleUseCase.kt'>GetOnlyTopicArticleUseCase.kt</a></b></td>
+									<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+								</tr>
+							</table>
+						</blockquote>
+					</details>
+				</blockquote>
+			</details>
+			<!-- mapper Submodule -->
+			<details>
+				<summary><b>mapper</b></summary>
+				<blockquote>
+					<div class='directory-path' style='padding: 8px 0; color: #666;'>
+						<code><b>⦿ domain.mapper</b></code>
+					<!-- articles Submodule -->
+					<details>
+						<summary><b>articles</b></summary>
+						<blockquote>
+							<div class='directory-path' style='padding: 8px 0; color: #666;'>
+								<code><b>⦿ domain.mapper.articles</b></code>
+							<table style='width: 100%; border-collapse: collapse;'>
+							<thead>
+								<tr style='background-color: #f8f9fa;'>
+									<th style='width: 30%; text-align: left; padding: 8px;'>File Name</th>
+									<th style='text-align: left; padding: 8px;'>Summary</th>
+								</tr>
+							</thead>
+								<tr style='border-bottom: 1px solid #eee;'>
+									<td style='padding: 8px;'><b><a href='shared/src/commonMain/kotlin/com/newsandfeed/blob/master/domain/mapper/articles/ArticleMapper.kt'>ArticleMapper.kt</a></b></td>
+									<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+								</tr>
+							</table>
+						</blockquote>
+					</details>
+				</blockquote>
+			</details>
+		</blockquote>
+	</details>
+	<!-- infra Submodule -->
+	<details>
+		<summary><b>infra</b></summary>
+		<blockquote>
+			<div class='directory-path' style='padding: 8px 0; color: #666;'>
+				<code><b>⦿ infra</b></code>
+			<!-- remote Submodule -->
+			<details>
+				<summary><b>remote</b></summary>
+				<blockquote>
+					<div class='directory-path' style='padding: 8px 0; color: #666;'>
+						<code><b>⦿ infra.remote</b></code>
+					<table style='width: 100%; border-collapse: collapse;'>
+					<thead>
+						<tr style='background-color: #f8f9fa;'>
+							<th style='width: 30%; text-align: left; padding: 8px;'>File Name</th>
+							<th style='text-align: left; padding: 8px;'>Summary</th>
+						</tr>
+					</thead>
+						<tr style='border-bottom: 1px solid #eee;'>
+							<td style='padding: 8px;'><b><a href='shared/src/commonMain/kotlin/com/newsandfeed/blob/master/infra/remote/KtorApiImpl.kt'>KtorApiImpl.kt</a></b></td>
+							<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+						</tr>
+						<tr style='border-bottom: 1px solid #eee;'>
+							<td style='padding: 8px;'><b><a href='shared/src/commonMain/kotlin/com/newsandfeed/blob/master/infra/remote/KtorApi.kt'>KtorApi.kt</a></b></td>
 							<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
 						</tr>
 					</table>
@@ -119,30 +313,42 @@
 			</details>
 		</blockquote>
 	</details>
-	<!-- kotlin Submodule -->
+	<!-- ui Submodule -->
 	<details>
-		<summary><b>kotlin</b></summary>
+		<summary><b>ui</b></summary>
 		<blockquote>
 			<div class='directory-path' style='padding: 8px 0; color: #666;'>
-				<code><b>⦿ kotlin</b></code>
-			<!-- com Submodule -->
+				<code><b>⦿ ui</b></code>
+			<!-- features Submodule -->
 			<details>
-				<summary><b>com</b></summary>
+				<summary><b>features</b></summary>
 				<blockquote>
 					<div class='directory-path' style='padding: 8px 0; color: #666;'>
-						<code><b>⦿ kotlin.com</b></code>
-					<!-- newsandfeed Submodule -->
+						<code><b>⦿ ui.features</b></code>
+					<!-- home Submodule -->
 					<details>
-						<summary><b>newsandfeed</b></summary>
+						<summary><b>home</b></summary>
 						<blockquote>
 							<div class='directory-path' style='padding: 8px 0; color: #666;'>
-								<code><b>⦿ kotlin.com.newsandfeed</b></code>
-							<!-- di Submodule -->
+								<code><b>⦿ ui.features.home</b></code>
+							<table style='width: 100%; border-collapse: collapse;'>
+							<thead>
+								<tr style='background-color: #f8f9fa;'>
+									<th style='width: 30%; text-align: left; padding: 8px;'>File Name</th>
+									<th style='text-align: left; padding: 8px;'>Summary</th>
+								</tr>
+							</thead>
+								<tr style='border-bottom: 1px solid #eee;'>
+									<td style='padding: 8px;'><b><a href='shared/src/commonMain/kotlin/com/newsandfeed/blob/master/ui/features/home/ArticleViewModel.kt'>ArticleViewModel.kt</a></b></td>
+									<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+								</tr>
+							</table>
+							<!-- mvi Submodule -->
 							<details>
-								<summary><b>di</b></summary>
+								<summary><b>mvi</b></summary>
 								<blockquote>
 									<div class='directory-path' style='padding: 8px 0; color: #666;'>
-										<code><b>⦿ kotlin.com.newsandfeed.di</b></code>
+										<code><b>⦿ ui.features.home.mvi</b></code>
 									<table style='width: 100%; border-collapse: collapse;'>
 									<thead>
 										<tr style='background-color: #f8f9fa;'>
@@ -151,242 +357,14 @@
 										</tr>
 									</thead>
 										<tr style='border-bottom: 1px solid #eee;'>
-											<td style='padding: 8px;'><b><a href='shared/src/commonMain/blob/master/kotlin/com/newsandfeed/di/DriverSqlModule.kt'>DriverSqlModule.kt</a></b></td>
+											<td style='padding: 8px;'><b><a href='shared/src/commonMain/kotlin/com/newsandfeed/blob/master/ui/features/home/mvi/ArticleState.kt'>ArticleState.kt</a></b></td>
 											<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
 										</tr>
 										<tr style='border-bottom: 1px solid #eee;'>
-											<td style='padding: 8px;'><b><a href='shared/src/commonMain/blob/master/kotlin/com/newsandfeed/di/CommonModule.kt'>CommonModule.kt</a></b></td>
+											<td style='padding: 8px;'><b><a href='shared/src/commonMain/kotlin/com/newsandfeed/blob/master/ui/features/home/mvi/ArticleIntent.kt'>ArticleIntent.kt</a></b></td>
 											<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
 										</tr>
 									</table>
-								</blockquote>
-							</details>
-							<!-- util Submodule -->
-							<details>
-								<summary><b>util</b></summary>
-								<blockquote>
-									<div class='directory-path' style='padding: 8px 0; color: #666;'>
-										<code><b>⦿ kotlin.com.newsandfeed.util</b></code>
-									<table style='width: 100%; border-collapse: collapse;'>
-									<thead>
-										<tr style='background-color: #f8f9fa;'>
-											<th style='width: 30%; text-align: left; padding: 8px;'>File Name</th>
-											<th style='text-align: left; padding: 8px;'>Summary</th>
-										</tr>
-									</thead>
-										<tr style='border-bottom: 1px solid #eee;'>
-											<td style='padding: 8px;'><b><a href='shared/src/commonMain/blob/master/kotlin/com/newsandfeed/util/CFlow.kt'>CFlow.kt</a></b></td>
-											<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
-										</tr>
-										<tr style='border-bottom: 1px solid #eee;'>
-											<td style='padding: 8px;'><b><a href='shared/src/commonMain/blob/master/kotlin/com/newsandfeed/util/CoroutineViewModel.kt'>CoroutineViewModel.kt</a></b></td>
-											<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
-										</tr>
-									</table>
-								</blockquote>
-							</details>
-							<!-- domain Submodule -->
-							<details>
-								<summary><b>domain</b></summary>
-								<blockquote>
-									<div class='directory-path' style='padding: 8px 0; color: #666;'>
-										<code><b>⦿ kotlin.com.newsandfeed.domain</b></code>
-									<!-- repository Submodule -->
-									<details>
-										<summary><b>repository</b></summary>
-										<blockquote>
-											<div class='directory-path' style='padding: 8px 0; color: #666;'>
-												<code><b>⦿ kotlin.com.newsandfeed.domain.repository</b></code>
-											<table style='width: 100%; border-collapse: collapse;'>
-											<thead>
-												<tr style='background-color: #f8f9fa;'>
-													<th style='width: 30%; text-align: left; padding: 8px;'>File Name</th>
-													<th style='text-align: left; padding: 8px;'>Summary</th>
-												</tr>
-											</thead>
-												<tr style='border-bottom: 1px solid #eee;'>
-													<td style='padding: 8px;'><b><a href='shared/src/commonMain/blob/master/kotlin/com/newsandfeed/domain/repository/ArticleRepository.kt'>ArticleRepository.kt</a></b></td>
-													<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
-												</tr>
-											</table>
-										</blockquote>
-									</details>
-									<!-- entity Submodule -->
-									<details>
-										<summary><b>entity</b></summary>
-										<blockquote>
-											<div class='directory-path' style='padding: 8px 0; color: #666;'>
-												<code><b>⦿ kotlin.com.newsandfeed.domain.entity</b></code>
-											<table style='width: 100%; border-collapse: collapse;'>
-											<thead>
-												<tr style='background-color: #f8f9fa;'>
-													<th style='width: 30%; text-align: left; padding: 8px;'>File Name</th>
-													<th style='text-align: left; padding: 8px;'>Summary</th>
-												</tr>
-											</thead>
-												<tr style='border-bottom: 1px solid #eee;'>
-													<td style='padding: 8px;'><b><a href='shared/src/commonMain/blob/master/kotlin/com/newsandfeed/domain/entity/ArticleEntity.kt'>ArticleEntity.kt</a></b></td>
-													<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
-												</tr>
-												<tr style='border-bottom: 1px solid #eee;'>
-													<td style='padding: 8px;'><b><a href='shared/src/commonMain/blob/master/kotlin/com/newsandfeed/domain/entity/DataOrException.kt'>DataOrException.kt</a></b></td>
-													<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
-												</tr>
-											</table>
-										</blockquote>
-									</details>
-									<!-- usecase Submodule -->
-									<details>
-										<summary><b>usecase</b></summary>
-										<blockquote>
-											<div class='directory-path' style='padding: 8px 0; color: #666;'>
-												<code><b>⦿ kotlin.com.newsandfeed.domain.usecase</b></code>
-											<!-- article Submodule -->
-											<details>
-												<summary><b>article</b></summary>
-												<blockquote>
-													<div class='directory-path' style='padding: 8px 0; color: #666;'>
-														<code><b>⦿ kotlin.com.newsandfeed.domain.usecase.article</b></code>
-													<table style='width: 100%; border-collapse: collapse;'>
-													<thead>
-														<tr style='background-color: #f8f9fa;'>
-															<th style='width: 30%; text-align: left; padding: 8px;'>File Name</th>
-															<th style='text-align: left; padding: 8px;'>Summary</th>
-														</tr>
-													</thead>
-														<tr style='border-bottom: 1px solid #eee;'>
-															<td style='padding: 8px;'><b><a href='shared/src/commonMain/blob/master/kotlin/com/newsandfeed/domain/usecase/article/GetAllArticleUseCase.kt'>GetAllArticleUseCase.kt</a></b></td>
-															<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
-														</tr>
-														<tr style='border-bottom: 1px solid #eee;'>
-															<td style='padding: 8px;'><b><a href='shared/src/commonMain/blob/master/kotlin/com/newsandfeed/domain/usecase/article/GetOnlyTopicArticleUseCase.kt'>GetOnlyTopicArticleUseCase.kt</a></b></td>
-															<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
-														</tr>
-													</table>
-												</blockquote>
-											</details>
-										</blockquote>
-									</details>
-									<!-- mapper Submodule -->
-									<details>
-										<summary><b>mapper</b></summary>
-										<blockquote>
-											<div class='directory-path' style='padding: 8px 0; color: #666;'>
-												<code><b>⦿ kotlin.com.newsandfeed.domain.mapper</b></code>
-											<!-- articles Submodule -->
-											<details>
-												<summary><b>articles</b></summary>
-												<blockquote>
-													<div class='directory-path' style='padding: 8px 0; color: #666;'>
-														<code><b>⦿ kotlin.com.newsandfeed.domain.mapper.articles</b></code>
-													<table style='width: 100%; border-collapse: collapse;'>
-													<thead>
-														<tr style='background-color: #f8f9fa;'>
-															<th style='width: 30%; text-align: left; padding: 8px;'>File Name</th>
-															<th style='text-align: left; padding: 8px;'>Summary</th>
-														</tr>
-													</thead>
-														<tr style='border-bottom: 1px solid #eee;'>
-															<td style='padding: 8px;'><b><a href='shared/src/commonMain/blob/master/kotlin/com/newsandfeed/domain/mapper/articles/ArticleMapper.kt'>ArticleMapper.kt</a></b></td>
-															<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
-														</tr>
-													</table>
-												</blockquote>
-											</details>
-										</blockquote>
-									</details>
-								</blockquote>
-							</details>
-							<!-- infra Submodule -->
-							<details>
-								<summary><b>infra</b></summary>
-								<blockquote>
-									<div class='directory-path' style='padding: 8px 0; color: #666;'>
-										<code><b>⦿ kotlin.com.newsandfeed.infra</b></code>
-									<!-- remote Submodule -->
-									<details>
-										<summary><b>remote</b></summary>
-										<blockquote>
-											<div class='directory-path' style='padding: 8px 0; color: #666;'>
-												<code><b>⦿ kotlin.com.newsandfeed.infra.remote</b></code>
-											<table style='width: 100%; border-collapse: collapse;'>
-											<thead>
-												<tr style='background-color: #f8f9fa;'>
-													<th style='width: 30%; text-align: left; padding: 8px;'>File Name</th>
-													<th style='text-align: left; padding: 8px;'>Summary</th>
-												</tr>
-											</thead>
-												<tr style='border-bottom: 1px solid #eee;'>
-													<td style='padding: 8px;'><b><a href='shared/src/commonMain/blob/master/kotlin/com/newsandfeed/infra/remote/KtorApiImpl.kt'>KtorApiImpl.kt</a></b></td>
-													<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
-												</tr>
-												<tr style='border-bottom: 1px solid #eee;'>
-													<td style='padding: 8px;'><b><a href='shared/src/commonMain/blob/master/kotlin/com/newsandfeed/infra/remote/KtorApi.kt'>KtorApi.kt</a></b></td>
-													<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
-												</tr>
-											</table>
-										</blockquote>
-									</details>
-								</blockquote>
-							</details>
-							<!-- ui Submodule -->
-							<details>
-								<summary><b>ui</b></summary>
-								<blockquote>
-									<div class='directory-path' style='padding: 8px 0; color: #666;'>
-										<code><b>⦿ kotlin.com.newsandfeed.ui</b></code>
-									<!-- features Submodule -->
-									<details>
-										<summary><b>features</b></summary>
-										<blockquote>
-											<div class='directory-path' style='padding: 8px 0; color: #666;'>
-												<code><b>⦿ kotlin.com.newsandfeed.ui.features</b></code>
-											<!-- home Submodule -->
-											<details>
-												<summary><b>home</b></summary>
-												<blockquote>
-													<div class='directory-path' style='padding: 8px 0; color: #666;'>
-														<code><b>⦿ kotlin.com.newsandfeed.ui.features.home</b></code>
-													<table style='width: 100%; border-collapse: collapse;'>
-													<thead>
-														<tr style='background-color: #f8f9fa;'>
-															<th style='width: 30%; text-align: left; padding: 8px;'>File Name</th>
-															<th style='text-align: left; padding: 8px;'>Summary</th>
-														</tr>
-													</thead>
-														<tr style='border-bottom: 1px solid #eee;'>
-															<td style='padding: 8px;'><b><a href='shared/src/commonMain/blob/master/kotlin/com/newsandfeed/ui/features/home/ArticleViewModel.kt'>ArticleViewModel.kt</a></b></td>
-															<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
-														</tr>
-													</table>
-													<!-- mvi Submodule -->
-													<details>
-														<summary><b>mvi</b></summary>
-														<blockquote>
-															<div class='directory-path' style='padding: 8px 0; color: #666;'>
-																<code><b>⦿ kotlin.com.newsandfeed.ui.features.home.mvi</b></code>
-															<table style='width: 100%; border-collapse: collapse;'>
-															<thead>
-																<tr style='background-color: #f8f9fa;'>
-																	<th style='width: 30%; text-align: left; padding: 8px;'>File Name</th>
-																	<th style='text-align: left; padding: 8px;'>Summary</th>
-																</tr>
-															</thead>
-																<tr style='border-bottom: 1px solid #eee;'>
-																	<td style='padding: 8px;'><b><a href='shared/src/commonMain/blob/master/kotlin/com/newsandfeed/ui/features/home/mvi/ArticleState.kt'>ArticleState.kt</a></b></td>
-																	<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
-																</tr>
-																<tr style='border-bottom: 1px solid #eee;'>
-																	<td style='padding: 8px;'><b><a href='shared/src/commonMain/blob/master/kotlin/com/newsandfeed/ui/features/home/mvi/ArticleIntent.kt'>ArticleIntent.kt</a></b></td>
-																	<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
-																</tr>
-															</table>
-														</blockquote>
-													</details>
-												</blockquote>
-											</details>
-										</blockquote>
-									</details>
 								</blockquote>
 							</details>
 						</blockquote>
@@ -409,18 +387,18 @@ This project requires the following dependencies:
 
 ### 🔷 Installation
 
-Build commonMain from the source and intsall dependencies:
+Build newsandfeed from the source and intsall dependencies:
 
 1. **Clone the repository:**
 
     ```sh
-    ❯ git clone ../commonMain
+    ❯ git clone ../newsandfeed
     ```
 
 2. **Navigate to the project directory:**
 
     ```sh
-    ❯ cd commonMain
+    ❯ cd newsandfeed
     ```
 
 3. **Install the dependencies:**
@@ -435,7 +413,7 @@ echo 'INSERT-RUN-COMMAND-HERE'
 
 ### 🔸 Testing
 
-Commonmain uses the {__test_framework__} test framework. Run the test suite with:
+Newsandfeed uses the {__test_framework__} test framework. Run the test suite with:
 
 echo 'INSERT-TEST-COMMAND-HERE'
 
@@ -451,9 +429,9 @@ echo 'INSERT-TEST-COMMAND-HERE'
 
 ## ✴️ Contributing
 
-- **💬 [Join the Discussions](https://LOCAL/src/commonMain/discussions)**: Share your insights, provide feedback, or ask questions.
-- **🐛 [Report Issues](https://LOCAL/src/commonMain/issues)**: Submit bugs found or log feature requests for the `commonMain` project.
-- **💡 [Submit Pull Requests](https://LOCAL/src/commonMain/blob/main/CONTRIBUTING.md)**: Review open PRs, and submit your own PRs.
+- **💬 [Join the Discussions](https://LOCAL/com/newsandfeed/discussions)**: Share your insights, provide feedback, or ask questions.
+- **🐛 [Report Issues](https://LOCAL/com/newsandfeed/issues)**: Submit bugs found or log feature requests for the `newsandfeed` project.
+- **💡 [Submit Pull Requests](https://LOCAL/com/newsandfeed/blob/main/CONTRIBUTING.md)**: Review open PRs, and submit your own PRs.
 
 <details closed>
 <summary>Contributing Guidelines</summary>
@@ -461,7 +439,7 @@ echo 'INSERT-TEST-COMMAND-HERE'
 1. **Fork the Repository**: Start by forking the project repository to your LOCAL account.
 2. **Clone Locally**: Clone the forked repository to your local machine using a git client.
    ```sh
-   git clone shared/src/commonMain
+   git clone shared/src/commonMain/kotlin/com/newsandfeed/
    ```
 3. **Create a New Branch**: Always work on a new branch, giving it a descriptive name.
    ```sh
@@ -484,8 +462,8 @@ echo 'INSERT-TEST-COMMAND-HERE'
 <summary>Contributor Graph</summary>
 <br>
 <p align="left">
-   <a href="https://LOCAL{/src/commonMain/}graphs/contributors">
-      <img src="https://contrib.rocks/image?repo=src/commonMain">
+   <a href="https://LOCAL{/com/newsandfeed/}graphs/contributors">
+      <img src="https://contrib.rocks/image?repo=com/newsandfeed">
    </a>
 </p>
 </details>
@@ -494,7 +472,7 @@ echo 'INSERT-TEST-COMMAND-HERE'
 
 ## ⭐ License
 
-Commonmain is protected under the [LICENSE](https://choosealicense.com/licenses) License. For more details, refer to the [LICENSE](https://choosealicense.com/licenses/) file.
+Newsandfeed is protected under the [LICENSE](https://choosealicense.com/licenses) License. For more details, refer to the [LICENSE](https://choosealicense.com/licenses/) file.
 
 ---
 
