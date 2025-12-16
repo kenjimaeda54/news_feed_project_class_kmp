@@ -229,23 +229,6 @@ val commonModule = module {
 
 ---
 
-## 🖥️ UI Compartilhada (Opcional)
-
-```text
-ui
-└── features
-    └── home
-```
-
-Contém:
-
-* ViewModels compartilhados
-* Lógica de estado
-
-> ⚠️ Em KMP, UI compartilhada **não é obrigatória**, mas pode ser útil.
-
----
-
 ## 🧰 Util
 
 ```text
