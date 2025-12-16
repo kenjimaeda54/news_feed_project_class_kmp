@@ -21,9 +21,9 @@
 ```sh
 # 📰 NewsAndFeed – Kotlin Multiplatform
 
-Este projeto é um **Kotlin Multiplatform (KMP)** com foco em ***compartilhamento de código entre Android e iOS**, onde o `commonMain` concentra **regra de negócio, dados e infraestrutura compartilhada**.
+Este projeto é um **Kotlin Multiplatform (KMP)** com foco em **compartilhamento de código entre Android e iOS**, onde o `commonMain` concentra **regra de negócio, dados e infraestrutura compartilhada**.
 
-O objetivo principal é estudar e aplicar **arquitetura em projetos KMP reais**, integrando ***Ktor, repositórios, use cases e DI**, mantendo o máximo possível fora das camadas específicas de plataforma.
+O objetivo principal é estudar e aplicar **arquitetura em projetos KMP reais**, integrando **Ktor, repositórios, use cases e DI**, mantendo o máximo possível fora das camadas específicas de plataforma.
 
 ---
 
