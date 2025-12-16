@@ -1,35 +1,28 @@
 <div id="top">
 
-<!-- HEADER STYLE: MODERN -->
-<div align="left" style="position: relative; width: 100%; height: 100%; ">
-
-<img src="readmeai/assets/logos/purple.svg" width="30%" style="position: absolute; top: 0; right: 0;" alt="Project Logo"/>
+<!-- HEADER STYLE: COMPACT -->
+<img src="readmeai/assets/logos/purple.svg" width="30%" align="left" style="margin-right: 15px">
 
 # NEWS_FEED_PROJECT_CLASS_KMP
-
-<em><em>
+<em></em>
 
 <!-- BADGES -->
-<img src="https://img.shields.io/github/license/kenjimaeda54/news_feed_project_class_kmp?style=flat&logo=opensourceinitiative&logoColor=white&color=0080ff" alt="license">
-<img src="https://img.shields.io/github/last-commit/kenjimaeda54/news_feed_project_class_kmp?style=flat&logo=git&logoColor=white&color=0080ff" alt="last-commit">
-<img src="https://img.shields.io/github/languages/top/kenjimaeda54/news_feed_project_class_kmp?style=flat&color=0080ff" alt="repo-top-language">
-<img src="https://img.shields.io/github/languages/count/kenjimaeda54/news_feed_project_class_kmp?style=flat&color=0080ff" alt="repo-language-count">
+<img src="https://img.shields.io/github/license/kenjimaeda54/news_feed_project_class_kmp?style=flat-square&logo=opensourceinitiative&logoColor=white&color=0080ff" alt="license">
+<img src="https://img.shields.io/github/last-commit/kenjimaeda54/news_feed_project_class_kmp?style=flat-square&logo=git&logoColor=white&color=0080ff" alt="last-commit">
+<img src="https://img.shields.io/github/languages/top/kenjimaeda54/news_feed_project_class_kmp?style=flat-square&color=0080ff" alt="repo-top-language">
+<img src="https://img.shields.io/github/languages/count/kenjimaeda54/news_feed_project_class_kmp?style=flat-square&color=0080ff" alt="repo-language-count">
 
 <em>Built with the tools and technologies:</em>
 
-<img src="https://img.shields.io/badge/JSON-000000.svg?style=flat&logo=JSON&logoColor=white" alt="JSON">
-<img src="https://img.shields.io/badge/Swift-F05138.svg?style=flat&logo=Swift&logoColor=white" alt="Swift">
-<img src="https://img.shields.io/badge/TOML-9C4121.svg?style=flat&logo=TOML&logoColor=white" alt="TOML">
-<img src="https://img.shields.io/badge/Gradle-02303A.svg?style=flat&logo=Gradle&logoColor=white" alt="Gradle">
-<img src="https://img.shields.io/badge/XML-005FAD.svg?style=flat&logo=XML&logoColor=white" alt="XML">
-<img src="https://img.shields.io/badge/bat-31369E.svg?style=flat&logo=bat&logoColor=white" alt="bat">
-<img src="https://img.shields.io/badge/Kotlin-7F52FF.svg?style=flat&logo=Kotlin&logoColor=white" alt="Kotlin">
+<img src="https://img.shields.io/badge/JSON-000000.svg?style=flat-square&logo=JSON&logoColor=white" alt="JSON">
+<img src="https://img.shields.io/badge/Swift-F05138.svg?style=flat-square&logo=Swift&logoColor=white" alt="Swift">
+<img src="https://img.shields.io/badge/TOML-9C4121.svg?style=flat-square&logo=TOML&logoColor=white" alt="TOML">
+<img src="https://img.shields.io/badge/Gradle-02303A.svg?style=flat-square&logo=Gradle&logoColor=white" alt="Gradle">
+<img src="https://img.shields.io/badge/XML-005FAD.svg?style=flat-square&logo=XML&logoColor=white" alt="XML">
+<img src="https://img.shields.io/badge/bat-31369E.svg?style=flat-square&logo=bat&logoColor=white" alt="bat">
+<img src="https://img.shields.io/badge/Kotlin-7F52FF.svg?style=flat-square&logo=Kotlin&logoColor=white" alt="Kotlin">
 
-</div>
-</div>
-<br clear="right">
-
----
+<br clear="left"/>
 
 ## Table of Contents
 
@@ -71,20 +64,37 @@
     ├── composeApp
     │   ├── build.gradle.kts
     │   └── src
+    │       ├── androidMain
+    │       └── androidUnitTest
     ├── gradle
     │   ├── libs.versions.toml
     │   └── wrapper
+    │       ├── gradle-wrapper.jar
+    │       └── gradle-wrapper.properties
     ├── gradle.properties
     ├── gradlew
     ├── gradlew.bat
     ├── iosApp
     │   ├── Configuration
+    │   │   └── Config.xcconfig
     │   ├── iosApp
+    │   │   ├── Assets.xcassets
+    │   │   ├── Info.plist
+    │   │   ├── Preview Content
+    │   │   ├── extension
+    │   │   ├── iOSApp.swift
+    │   │   └── ui
     │   └── iosApp.xcodeproj
+    │       ├── project.pbxproj
+    │       └── project.xcworkspace
     ├── settings.gradle.kts
     └── shared
         ├── build.gradle.kts
         └── src
+            ├── androidMain
+            ├── commonMain
+            ├── commonTest
+            └── iosMain
 ```
 
 ### Project Index
