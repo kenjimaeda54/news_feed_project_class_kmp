@@ -1,7 +1,11 @@
-# Ignora tudo
+# Ignora tudo por padrão
 *
 
-# Libera apenas o commonMain
+# Libera apenas o módulo shared
 !shared/
 !shared/src/
+!shared/src/commonMain/
 !shared/src/commonMain/**
+
+# Libera README raiz (opcional)
+!README.md
