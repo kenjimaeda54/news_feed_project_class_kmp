@@ -6,8 +6,6 @@
 </div>
 
 <!-- BADGES -->
-<!-- local repository, no metadata badges. -->
-
 <em>Built with the tools and technologies:</em>
 
 <img src="https://img.shields.io/badge/Kotlin-7F52FF.svg?style=default&logo=Kotlin&logoColor=white" alt="Kotlin">
@@ -15,10 +13,6 @@
 </div>
 <br>
 
-
-## 🌌 Project Structure
-
-```sh
 # 📰 NewsAndFeed – Kotlin Multiplatform
 
 Este projeto é um **Kotlin Multiplatform (KMP)** com foco em **compartilhamento de código entre Android e iOS**, onde o `commonMain` concentra **regra de negócio, dados e infraestrutura compartilhada**.
