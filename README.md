@@ -1,24 +1,16 @@
 <div id="top">
 
-<!-- HEADER STYLE: CONSOLE -->
 <div align="center">
-
-</div>
-
-<!-- BADGES -->
-<!-- local repository, no metadata badges. -->
 
 <em>Built with the tools and technologies:</em>
 
 <img src="https://img.shields.io/badge/Kotlin-7F52FF.svg?style=default&logo=Kotlin&logoColor=white" alt="Kotlin">
 
 </div>
-<br>
+</div>
 
+<br/>
 
-## 🌌 Project Structure
-
-```sh
 # 📰 NewsAndFeed – Kotlin Multiplatform
 
 Este projeto é um **Kotlin Multiplatform (KMP)** com foco em **compartilhamento de código entre Android e iOS**, onde o `commonMain` concentra **regra de negócio, dados e infraestrutura compartilhada**.
@@ -29,12 +21,13 @@ O objetivo principal é estudar e aplicar **arquitetura em projetos KMP reais**,
 
 ## 🎯 Visão Geral do Projeto
 
-* Código compartilhado em `commonMain`
-* Android e iOS atuam como **camadas de apresentação**
-* Comunicação com API via **Ktor**
-* Arquitetura inspirada em **Clean Architecture**, adaptada à realidade do KMP
+- Código compartilhado em `commonMain`
+- Android e iOS atuam como **camadas de apresentação**
+- Comunicação com API via **Ktor**
+- Arquitetura inspirada em **Clean Architecture**, adaptada à realidade do KMP
 
-> 📌 Nem todo projeto KMP segue Clean Architecture “pura”. Este projeto segue uma **variação pragmática**, comum em projetos educacionais e reais.
+> 📌 Nem todo projeto KMP segue Clean Architecture “pura”.  
+> Este projeto segue uma **variação pragmática**, comum em projetos educacionais e reais.
 
 ---
 
@@ -48,280 +41,240 @@ newsandfeed
 ├── infra
 ├── ui
 └── util
-```
 
-Cada pacote possui uma **responsabilidade clara**, explicada abaixo.
+Cada pacote possui uma responsabilidade clara, explicada abaixo.
+❤️ Domain (Regra de Negócio)
 
----
+A camada domain concentra o que é mais importante no projeto: as regras de negócio.
 
-## ❤️ Domain (Regra de Negócio)
-
-A camada **domain** concentra o que é mais importante no projeto: **as regras de negócio**.
-
-```text
 domain
 ├── entity
 ├── mapper
 ├── repository
 └── usecase
-```
 
-### 📁 `entity`
+📁 entity
 
-* Modelos centrais do domínio
-* Independentes de framework
+    Modelos centrais do domínio
 
-```kotlin
+    Independentes de framework
+
 data class ArticleEntity(
     val title: String,
     val description: String
 )
-```
 
 Também inclui wrappers de estado:
 
-```kotlin
 sealed class DataOrException<T> {
     data class Success<T>(val data: T) : DataOrException<T>()
     data class Error(val exception: Exception) : DataOrException<Nothing>()
 }
-```
 
----
+📁 repository
 
-### 📁 `repository`
+Define contratos, nunca implementações:
 
-Define **contratos**, nunca implementações:
-
-```kotlin
 interface ArticleRepository {
     suspend fun getArticles(): DataOrException<List<ArticleEntity>>
 }
-```
 
----
+📁 usecase
 
-### 📁 `usecase`
+Use cases encapsulam ações do negócio.
 
-Use cases encapsulam **ações do negócio**.
-
-```text
 usecase
 └── article
-```
 
 Exemplo conceitual:
 
-```kotlin
 class GetArticlesUseCase(
     private val repository: ArticleRepository
 ) {
     suspend operator fun invoke() = repository.getArticles()
 }
-```
 
----
-
-### 📁 `mapper`
+📁 mapper
 
 Responsável por converter modelos entre camadas:
 
-* DTO → Entity
+    DTO → Entity
 
 Isso evita acoplamento do domínio com a API.
+💾 Data (Acesso a Dados)
 
----
+Camada responsável por buscar e preparar dados.
 
-## 💾 Data (Acesso a Dados)
-
-Camada responsável por **buscar e preparar dados**.
-
-```text
 data
 ├── dto
 ├── remote
 └── repository
-```
 
-### 📁 `dto`
+📁 dto
 
-Modelos que representam **respostas da API**:
+Modelos que representam respostas da API:
 
-* `ArticleDto`
-* `NewsDto`
-* `SourceDto`
+    ArticleDto
 
-> ❌ DTOs não devem ser usados diretamente na UI ou no Domain.
+    NewsDto
 
----
+    SourceDto
 
-### 📁 `remote`
+    ❌ DTOs não devem ser usados diretamente na UI ou no Domain.
+
+📁 remote
 
 Define contratos para fontes de dados remotas:
 
-```kotlin
 interface RemoteDataSource {
     suspend fun fetchNews(): NewsDto
 }
-```
 
----
-
-### 📁 `repository`
+📁 repository
 
 Implementação dos contratos do Domain:
 
-```kotlin
 class ArticleRepositoryImpl(
     private val remoteDataSource: RemoteDataSource
 ) : ArticleRepository {
-    override suspend fun getArticles() = /* lógica */
+
+    override suspend fun getArticles(): DataOrException<List<ArticleEntity>> {
+        // chamada da API
+        // mapeamento DTO → Entity
+        // tratamento de erro
+        TODO()
+    }
 }
-```
 
 Aqui acontece:
 
-* Chamada de API
-* Mapeamento DTO → Entity
-* Tratamento de erro
+    Chamada de API
 
----
+    Mapeamento DTO → Entity
 
-## 🌐 Infra (Infraestrutura)
+    Tratamento de erro
 
-A camada **infra** contém implementações técnicas concretas.
+🌐 Infra (Infraestrutura)
 
-```text
+A camada infra contém implementações técnicas concretas.
+
 infra
 └── remote
-```
 
-### 📁 `infra/remote`
+📁 infra/remote
 
-* Configuração do **Ktor Client**
-* Implementação real da API
+    Configuração do Ktor Client
 
-```kotlin
+    Implementação real da API
+
 class KtorApiImpl : KtorApi {
-    override suspend fun getNews(): NewsDto { /* ... */ }
+    override suspend fun getNews(): NewsDto {
+        TODO()
+    }
 }
-```
 
-> 📌 Separar `infra` ajuda a manter `data` e `domain` limpos.
+    📌 Separar infra ajuda a manter data e domain limpos.
 
----
+🧩 DI (Dependency Injection)
 
-## 🧩 DI (Dependency Injection)
-
-```text
 di
 ├── CommonModule.kt
 └── DriverSqlModule.kt
-```
 
 Responsável por:
 
-* Criar instâncias
-* Resolver dependências
-* Compartilhar objetos entre plataformas
+    Criar instâncias
+
+    Resolver dependências
+
+    Compartilhar objetos entre plataformas
 
 Exemplo conceitual:
 
-```kotlin
 val commonModule = module {
     single<ArticleRepository> { ArticleRepositoryImpl(get()) }
 }
-```
 
----
+🖥️ UI Compartilhada (Opcional)
 
-## 🖥️ UI Compartilhada (Opcional)
-
-```text
 ui
 └── features
     └── home
-```
 
 Contém:
 
-* ViewModels compartilhados
-* Lógica de estado
+    ViewModels compartilhados
 
-> ⚠️ Em KMP, UI compartilhada **não é obrigatória**, mas pode ser útil.
+    Lógica de estado
 
----
+    ⚠️ Em KMP, UI compartilhada não é obrigatória, mas pode ser útil.
 
-## 🧰 Util
+🧰 Util
 
-```text
 util
 ├── CFlow.kt
 └── CoroutineViewModel.kt
-```
 
 Fornece:
 
-* Abstrações para `Flow` funcionar em iOS
-* Base de ViewModel multiplataforma
+    Abstrações para Flow funcionar em iOS
 
-Esses arquivos são **padrão em projetos KMP com StateFlow**.
+    Base de ViewModel multiplataforma
 
----
+Esses arquivos são padrão em projetos KMP com StateFlow.
+🚀 Como Iniciar um Projeto KMP (Padrão)
+1️⃣ Criar projeto
 
-## 🚀 Como Iniciar um Projeto KMP (Padrão)
+    Kotlin Multiplatform Wizard
 
-### 1️⃣ Criar projeto
+    Template do Android Studio
 
-* Use o **Kotlin Multiplatform Wizard**
-* Ou template do Android Studio
+2️⃣ Definir responsabilidades
 
-### 2️⃣ Definir responsabilidades
+    commonMain: negócio, dados, infra compartilhada
 
-* `commonMain`: negócio, dados, infra compartilhada
-* `androidMain`: UI Android
-* `iosMain`: UI iOS
+    androidMain: UI Android
 
-### 3️⃣ Escolher bibliotecas compatíveis
+    iosMain: UI iOS
 
-* Networking: **Ktor**
-* Database: **SQLDelight**
-* Async: **Coroutines**
+3️⃣ Escolher bibliotecas compatíveis
 
-### 4️⃣ Evitar no `commonMain`
+    Networking: Ktor
 
-* Context Android
-* Frameworks de UI nativos
-* Código dependente de plataforma
+    Database: SQLDelight
 
----
+    Async: Coroutines
 
-## 📚 O Que é Necessário Saber para Usar Este Projeto
+4️⃣ Evitar no commonMain
 
-* Kotlin básico e intermediário
-* Coroutines e Flow
-* Conceitos de Clean Architecture
-* Noções de KMP
-* Injeção de dependência
-* API REST
+    Context Android
 
----
+    Frameworks de UI nativos
 
-## ✅ Benefícios da Arquitetura Atual
+    Código dependente de plataforma
+
+📚 O Que é Necessário Saber para Usar Este Projeto
+
+    Kotlin básico e intermediário
+
+    Coroutines e Flow
+
+    Conceitos de Clean Architecture
+
+    Noções de KMP
+
+    Injeção de dependência
+
+    API REST
+
+✅ Benefícios da Arquitetura Atual
 
 ✔️ Código compartilhado real
 ✔️ Separação clara de responsabilidades
 ✔️ Fácil evolução
 ✔️ Aderente ao padrão KMP
+📌 Considerações Finais
 
----
+Esta arquitetura representa um estado realista de um projeto KMP em evolução.
 
-## 📌 Considerações Finais
-
-Esta arquitetura representa um **estado realista** de um projeto KMP em evolução.
-
-> 📈 O projeto pode evoluir para uma Clean Architecture mais rígida, mas já segue boas práticas do ecossistema KMP.
-
----
-
-📚 Projeto com foco educacional em **Kotlin Multiplatform na prática**.
+    📈 O projeto pode evoluir para uma Clean Architecture mais rígida, mas já segue boas práticas do ecossistema KMP.
