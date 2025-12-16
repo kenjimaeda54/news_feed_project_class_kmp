@@ -15,36 +15,6 @@
 </div>
 <br>
 
-## ⚛️ Table of Contents
-
-- [⚛ ️ Table of Contents](#-table-of-contents)
-- [🔮 Overview](#-overview)
-- [💫 Features](#-features)
-- [🌌 Project Structure](#-project-structure)
-    - [✨ Project Index](#-project-index)
-- [⚡ Getting Started](#-getting-started)
-    - [💠 Prerequisites](#-prerequisites)
-    - [🔷 Installation](#-installation)
-    - [🔹 Usage](#-usage)
-    - [🔸 Testing](#-testing)
-- [🌀 Roadmap](#-roadmap)
-- [✴ ️ Contributing](#-contributing)
-- [⭐ License](#-license)
-- [✧ Acknowledgments](#-acknowledgments)
-
----
-
-## 🔮 Overview
-
-
-
----
-
-## 💫 Features
-
-<code>❯ REPLACE-ME</code>
-
----
 
 ## 🌌 Project Structure
 
