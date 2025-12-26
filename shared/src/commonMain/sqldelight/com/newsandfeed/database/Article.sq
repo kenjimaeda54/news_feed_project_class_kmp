@@ -1,0 +1,35 @@
+insertArticle:
+INSERT OR IGNORE INTO Article(id)
+VALUES (?);
+
+
+insertContent:
+INSERT OR REPLACE INTO
+Content(articleId,author,title, description, url, urlToImage,
+content)
+VALUES (?, ?, ?, ?, ?, ?, ?);
+
+
+--Abaixo e uma query que mistura as duas tabelas para retornar os artigos com seus conteudos
+--a é referencia a tabela Article e o c a tabela Content
+
+selectAllArticleWithContent:
+SELECT
+  a.id AS articleId,
+  c.id AS contentId,
+  c.author,
+  c.title,
+  c.description,
+  c.url,
+  c.urlToImage,
+  c.content
+FROM Article a
+JOIN Content c ON c.articleId = a.id;
+
+deleteAllArticles:
+DELETE FROM Article;
+
+
+selectLastestCreateAt:
+SELECT createAt FROM Article
+ORDER BY createAt DESC  LIMIT 1;

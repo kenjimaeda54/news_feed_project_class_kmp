@@ -11,7 +11,9 @@ import SwiftUI
 struct ArticleScreen: View {
     @StateObject private var articleStore = ArticleStore()
     @State private var articleSearch: String = ""
-
+    @State var isShowToastError = false
+    @State var isShowAlert = false
+    
     var body: some View {
         NavigationStack {
             VStack(spacing: 0) {
@@ -71,6 +73,22 @@ struct ArticleScreen: View {
             }
             .background(ColorsApp.background)
             .edgesIgnoringSafeArea(.bottom)
+            .alert("Sem internet", isPresented: $isShowToastError, actions: {
+                Button("Tentar novamente") {
+                    articleStore.sendIntent(ArticleIntent.LoadIAllArticles())
+                }
+                if #available(iOS 26.0, *) {
+                    Button("Continuar sem atualizar", role: .close) {}
+                }
+            }, message: {
+               Text("Connecte com a internet e tente nvoamente para visualizar o conteudo recentes")
+            })
+            .onAppear {
+                articleStore.sendIntent(ArticleIntent.LoadIAllArticles())
+            }
+            .onChange(of: articleStore.state.showToastErrorIfNotConnectionInternet) { _, newValue in
+                    isShowToastError = newValue
+            }
 
         }
     }

@@ -30,4 +30,14 @@ class RemoteDataSource(private val ktorApi: KtorApi) : KtorApi by ktorApi {
         }
     }
 
+    suspend fun fetchTopHeadlines(): DataOrException<NewsDto?, Boolean, Exception> {
+        return try {
+            val response =
+                httpClient.get("/v2/everything?domains=g1.globo.com,uol.com.br,cnnbrasil.com.br&language=pt&sortBy=publishedAt&pageSize=10&apikey=$apiKey")
+            DataOrException(data = response.body(), isLoading = false)
+        } catch (e: Exception) {
+            DataOrException(data = null, isLoading = false, exception = e)
+        }
+    }
+
 }

@@ -12,6 +12,10 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.SnackbarDuration
+import androidx.compose.material.SnackbarHost
+import androidx.compose.material.SnackbarHostState
+import androidx.compose.material.SnackbarResult
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
@@ -19,9 +23,11 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
 import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
@@ -37,46 +43,53 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import com.newsandfeed.domain.entity.ContentEntity
-import com.newsandfeed.ui.features.home.ArticleViewModel
+import com.newsandfeed.ui.features.article.ArticleViewModel
 import com.newsandfeed.ui.features.home.mvi.ArticleIntent
+import com.newsandfeed.ui.features.views.CardComponent
+import com.newsandfeed.ui.features.views.ErrorComponent
+import com.newsandfeed.ui.features.views.LoadingComponent
 
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
 fun ArticleScreen() {
     val articleViewModel = viewModel<ArticleViewModel>()
+    val snackBarHostState = remember { SnackbarHostState() }
     val state by articleViewModel.state.collectAsState()
     var articleSearch by rememberSaveable {
         mutableStateOf("")
     }
 
-    Scaffold { paddingValues ->
+    LaunchedEffect(Unit) {
+        articleViewModel.handleIntent(ArticleIntent.LoadIAllArticles)
+    }
+
+    LaunchedEffect(state.showToastErrorIfNotConnectionInternet) {
+        if (state.showToastErrorIfNotConnectionInternet) {
+            val result = snackBarHostState.showSnackbar(
+                message = "Conecta com a internet e tenta novamente para visualizar conteúdo recente",
+                actionLabel = "Tentar novamente",
+                duration = SnackbarDuration.Long
+            )
+
+            if (result == SnackbarResult.ActionPerformed) {
+                articleViewModel.handleIntent(ArticleIntent.LoadIAllArticles)
+            }
+        }
+    }
+
+    Scaffold(
+        snackbarHost = { SnackbarHost(snackBarHostState) }
+    ) { paddingValues ->
         Column(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(paddingValues),
         ) {
             if (state.isLoading) {
-                Box(
-                    modifier = Modifier
-                        .fillMaxSize(),
-                    contentAlignment = Alignment.Center
-                ) {
-                    CircularProgressIndicator()
-                }
+                LoadingComponent()
             } else if (state.error != null) {
-                Box(
-                    modifier = Modifier
-                        .fillMaxSize(),
-                    contentAlignment = Alignment.Center
-                ) {
-                    Text(
-                        text =  "Erro desconhecido",
-                        style = MaterialTheme.typography.titleLarge,
-                        color = MaterialTheme.colorScheme.error,
-                        modifier = Modifier.padding(16.dp)
-                    )
-                }
+                ErrorComponent()
             } else {
                 TextField(
                     modifier = Modifier.fillMaxWidth(),
@@ -110,46 +123,14 @@ fun ArticleScreen() {
                     },
                 )
                 LazyColumn(content = {
-                    items(state.articles.content,{ it -> it.url}) { content ->
-                        HomeContent(content)
+                    items(state.articles.content, { it -> it.url }) { content ->
+                        CardComponent(content)
                     }
                 })
             }
         }
     }
 
-}
-
-@Composable
-private fun HomeContent(article: ContentEntity) {
-    Row(
-        modifier = Modifier.padding(
-            horizontal = 16.dp,
-            vertical = 15.dp
-        ),
-        horizontalArrangement = Arrangement.spacedBy(10.dp),
-    ) {
-        AsyncImage(
-            modifier = Modifier
-                .size(150.dp)
-                .clip(RoundedCornerShape(5.dp)),
-            model = ImageRequest.Builder(LocalContext.current).data(article.urlToImage)
-                .crossfade(true).build(),
-            contentDescription = "Image Load",
-            contentScale = ContentScale.Crop
-        )
-        Column(
-            verticalArrangement = Arrangement.spacedBy(13.dp)
-        ) {
-            Text(article.title, style = MaterialTheme.typography.titleLarge)
-            Text(
-                article.description,
-                maxLines = 4,
-                overflow = TextOverflow.Ellipsis,
-                style = MaterialTheme.typography.bodyMedium
-            )
-        }
-    }
 }
 
 @Preview(showBackground = true)

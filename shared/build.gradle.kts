@@ -44,6 +44,7 @@ kotlin {
             implementation(libs.ktor.serialization)
             implementation(libs.ktor.client.core)
             implementation(libs.sql.coroutines.extensions)
+            implementation(libs.kotlinx.datetime)
         }
 
         commonTest.dependencies {

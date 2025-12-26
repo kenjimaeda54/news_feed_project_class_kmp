@@ -22,6 +22,7 @@ struct MainScreen: View {
             }
         }
         .tint(ColorsApp.tertiary)
+        
     }
     
     @ViewBuilder
@@ -31,6 +32,7 @@ struct MainScreen: View {
             HomeScreen()
         case .article:
             ArticleScreen()
+                .id(tabItem == TabItem.article ?  "article" : "")
         }
     }
 }

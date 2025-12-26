@@ -24,6 +24,7 @@ coil-compose = "2.7.0"
 navigation-compose = "2.9.6"
 bottom-navigation-compose = "1.10.0"
 sqlDeligth = "2.0.0"
+kotlinx-datetime = "0.7.1"
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
@@ -55,6 +56,7 @@ ktor-client-android = { module = "io.ktor:ktor-client-android", version.ref = "k
 ktor-client-darwin = { module = "io.ktor:ktor-client-darwin", version.ref = "ktor" }
 ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor"}
 coil-compose = {module = "io.coil-kt:coil-compose", version.ref = "coil-compose"}
+kotlinx-datetime = {module = "org.jetbrains.kotlinx:kotlinx-datetime",version.ref = "kotlinx-datetime"}
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
