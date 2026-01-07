@@ -1,5 +1,3 @@
----
-
 # 📰 NewsAndFeed – Kotlin Multiplatform
 
 ![Kotlin](https://img.shields.io/badge/Kotlin-7F52FF.svg?style=flat\&logo=Kotlin\&logoColor=white)
