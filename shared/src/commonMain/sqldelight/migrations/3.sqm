@@ -1,0 +1,19 @@
+CREATE TABLE TopHeadlines (
+    id TEXT NOT NULL PRIMARY KEY,
+    createAt TEXT DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE ContentTopHeadlines (
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    topHeadlinesId TEXT NOT NULL,
+    author TEXT,
+    content TEXT NOT NULL,
+    description TEXT,
+    title TEXT,
+    url TEXT NOT NULL,
+    urlToImage TEXT,
+    FOREIGN KEY(topHeadlinesId) REFERENCES TopHeadlines(id)
+        ON DELETE CASCADE
+);
+
+CREATE INDEX idx_content_topHeadlinesId ON ContentTopHeadlines(topHeadlinesId);

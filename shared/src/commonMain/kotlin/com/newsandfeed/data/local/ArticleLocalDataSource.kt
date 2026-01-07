@@ -9,7 +9,7 @@ import org.koin.core.component.inject
 import kotlin.uuid.ExperimentalUuidApi
 import kotlin.uuid.Uuid
 
-class LocalDataSource : KoinComponent {
+class ArticleLocalDataSource : KoinComponent {
     private val newsDatabase by inject<NewsDatabase>()
 
     @OptIn(ExperimentalUuidApi::class)

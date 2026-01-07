@@ -5,6 +5,7 @@ import com.newsandfeed.ui.features.topheadline.mvi.HomeState
 import com.newsandfeed.ui.features.topheadline.mvi.HomeIntent
 import com.newsandfeed.util.CFlow
 import com.newsandfeed.util.CoroutineViewModel
+import com.newsandfeed.util.HAS_NOT_CONNECTION_INTERNET
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.catch
@@ -21,6 +22,7 @@ class HomeViewModel : CoroutineViewModel(), KoinComponent {
 
     //wrap para ios
     val cState = CFlow(state)
+    val initState = _state.value
 
 
     fun handleIntent(intent: HomeIntent) {
@@ -29,12 +31,16 @@ class HomeViewModel : CoroutineViewModel(), KoinComponent {
         }
     }
 
+    //wrapper para ios
+    fun subscribe(block: (HomeState) -> Unit) = cState.subscribe(block, scope)
+
     private fun loadTopHeadlines() = scope.launch {
         getTopHeadlineUseCase()
             .onStart {
                 _state.update {
                     it.copy(
                         isLoading = true,
+                        showToastErrorIfNotConnectionInternet = false
                     )
                 }
             }
@@ -42,7 +48,8 @@ class HomeViewModel : CoroutineViewModel(), KoinComponent {
                 _state.update {
                     it.copy(
                         isLoading = false,
-                        error = error.message
+                        error = error.message,
+                        showToastErrorIfNotConnectionInternet = error.message == HAS_NOT_CONNECTION_INTERNET
                     )
                 }
             }
@@ -52,6 +59,7 @@ class HomeViewModel : CoroutineViewModel(), KoinComponent {
                         isLoading = false,
                         topHeadlines = dataOrException.data ?: it.topHeadlines,
                         error = dataOrException.exception?.message,
+                        showToastErrorIfNotConnectionInternet = dataOrException.exception?.message == HAS_NOT_CONNECTION_INTERNET
                     )
                 }
             }

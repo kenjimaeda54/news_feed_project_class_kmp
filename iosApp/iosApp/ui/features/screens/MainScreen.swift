@@ -30,6 +30,7 @@ struct MainScreen: View {
         switch tabItem {
         case .home:
             HomeScreen()
+                .id(tabItem == TabItem.home ? "home" : "")
         case .article:
             ArticleScreen()
                 .id(tabItem == TabItem.article ?  "article" : "")

@@ -1,0 +1,29 @@
+insertTopHeadlines:
+INSERT OR IGNORE INTO TopHeadlines(id)
+VALUES (?);
+
+insertContentTopHeadlines:
+INSERT INTO ContentTopHeadlines(topHeadlinesId, author, content, description, title, url, urlToImage)
+VALUES (?, ?, ?, ?, ?, ?, ?);
+
+--abaixo e uma mistura do select com join para retornar os dados juntos
+
+selectTopHeadlinesWithContentTopHeadlines:
+SELECT
+   a.id AS topHeadlinesId,
+   c.id AS contentId,
+   c.author,
+   c.content,
+   c.description,
+   c.title,
+   c.url,
+   c.urlToImage
+FROM  TopHeadlines a
+JOIN ContentTopHeadlines c ON c.topHeadlinesId = a.id;
+
+deleteAllTopHeadlines:
+DELETE FROM TopHeadlines;
+
+selectLastCreatedAt:
+SELECT createAt FROM TopHeadlines
+ORDER BY createAt DESC LIMIT 1;

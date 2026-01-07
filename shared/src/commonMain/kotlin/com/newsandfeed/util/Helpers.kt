@@ -1,5 +1,6 @@
 package com.newsandfeed.util
 
+import kotlinx.coroutines.flow.first
 import kotlin.time.Clock
 import kotlin.time.Duration.Companion.minutes
 import kotlin.time.ExperimentalTime
@@ -18,9 +19,9 @@ fun isExpiredData(createAt: String, expirationTime: Int): Boolean {
         val currentInstant = Clock.System.now()
         val timeElapsed = currentInstant - createAtInstant
         timeElapsed > expirationLimit
-    }catch (exception: IllegalArgumentException) {
-       false
-    }catch (exception: Exception) {
-       false
+    } catch (exception: IllegalArgumentException) {
+        false
+    } catch (exception: Exception) {
+        false
     }
 }

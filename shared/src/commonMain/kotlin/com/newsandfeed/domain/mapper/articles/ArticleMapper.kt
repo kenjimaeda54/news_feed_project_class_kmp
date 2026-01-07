@@ -3,6 +3,7 @@ package com.newsandfeed.domain.mapper.articles
 import com.newsandfeed.data.dto.ArticleDto
 import com.newsandfeed.data.dto.NewsDto
 import com.newsandfeed.database.SelectAllArticleWithContent
+import com.newsandfeed.database.SelectTopHeadlinesWithContentTopHeadlines
 import com.newsandfeed.domain.entity.ArticleEntity
 import com.newsandfeed.domain.entity.ContentEntity
 
@@ -25,6 +26,15 @@ fun SelectAllArticleWithContent.toDomain() = ContentEntity(
     content = this.content,
     description = this.description ?: "",
     title = this.title,
-    url =this.url,
+    url = this.url,
+    urlToImage = this.urlToImage ?: ""
+)
+
+fun SelectTopHeadlinesWithContentTopHeadlines.toDomain() = ContentEntity(
+    author = this.author ?: "",
+    content = this.content,
+    description = this.description ?: "",
+    title = this.title ?: "",
+    url = this.url,
     urlToImage = this.urlToImage ?: ""
 )

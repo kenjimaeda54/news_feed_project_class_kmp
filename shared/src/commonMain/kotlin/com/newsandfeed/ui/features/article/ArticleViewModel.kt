@@ -32,7 +32,10 @@ class ArticleViewModel : CoroutineViewModel(), KoinComponent{
     private val _state = MutableStateFlow(ArticleState())
     private val _searchText = MutableStateFlow("")
     val state: StateFlow<ArticleState> = _state.asStateFlow()
+    //wapper para ios
     val cState: CFlow<ArticleState> = CFlow(state)
+    //wapper para dados inicias no IOS
+    val initState: ArticleState = state.value
 
     init {
         scope.launch {
@@ -51,6 +54,9 @@ class ArticleViewModel : CoroutineViewModel(), KoinComponent{
             is ArticleIntent.SearchArticle -> searchArticles(intent.query)
         }
     }
+
+    //wrapper para ios
+    fun subscribe(block: (ArticleState) -> Unit) = cState.subscribe(block, scope)
 
     private fun searchArticles(query: String) {
         _searchText.value = query

@@ -1,6 +1,7 @@
 package com.newsandfeed.di
 
-import com.newsandfeed.data.local.LocalDataSource
+import com.newsandfeed.data.local.ArticleLocalDataSource
+import com.newsandfeed.data.local.TopHeadlineLocalDataSource
 import com.newsandfeed.data.remote.RemoteDataSource
 import com.newsandfeed.data.repository.ArticleRepositoryImpl
 import com.newsandfeed.data.repository.TopHeadlinesRepositoryImpl
@@ -38,7 +39,8 @@ private val clientModule = module {
 }
 
 private val localModule = module {
-    single { LocalDataSource() }
+    single { ArticleLocalDataSource() }
+    single { TopHeadlineLocalDataSource() }
 }
 
 private val repositoryModule = module {

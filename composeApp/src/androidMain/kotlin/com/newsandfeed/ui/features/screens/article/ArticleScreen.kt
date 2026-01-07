@@ -88,7 +88,7 @@ fun ArticleScreen() {
         ) {
             if (state.isLoading) {
                 LoadingComponent()
-            } else if (state.error != null) {
+            } else if (state.error != null && !state.showToastErrorIfNotConnectionInternet) {
                 ErrorComponent()
             } else {
                 TextField(
