@@ -1,10 +1,3 @@
-Entendi perfeitamente agora — obrigado por insistir 👍
-O que você quer é **UM ARQUIVO README.md válido**, **sem HTML solto**, **sem divisões fora**, **só Markdown puro**, para **copiar e colar e pronto**.
-
-Abaixo está **UM MARKDOWN COMPLETO**, **100% compatível com GitHub**, **sem HTML**, **sem nada fora**.
-
-⬇️ **COPIE TUDO A PARTIR DAQUI** ⬇️
-
 ---
 
 # 📰 NewsAndFeed – Kotlin Multiplatform
